@@ -1,0 +1,38 @@
+doctype html
+html.no-js(lang='ru')
+  include components/service/_head
+
+  body
+
+    //- mixins
+    include ../blocks/foundation/callout/_callout
+    include ../blocks/foundation/label/_label
+    include ../blocks/foundation/pagination/_pagination
+    include ../blocks/foundation/accordion/_accordion
+    include ../blocks/foundation/button/_button
+    include ../blocks/foundation/slider/_slider
+    include ../blocks/foundation/close-button/_close-button
+    include ../blocks/foundation/breadcrumbs/_breadcrumbs
+    include ../blocks/foundation/badge/_badge
+    
+    include ../blocks/general/step/_step
+    include ../blocks/general/dd/_dd
+    
+    include ../blocks/shop/quant/_quant
+    include ../blocks/shop/prod/_prod
+    
+    //- header and top-line
+    include components/shop/_top-line
+    include components/shop/_header
+
+    //- main content
+    block page
+      .grid-container
+        .grid-x.grid-padding-x
+          .cell.large-12.medium-6.small-2
+            p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis, officiis.
+          .cell.large-12.medium-6.small-2
+            p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis, officiis.
+      
+    include components/shop/_footer
+    include components/service/_js

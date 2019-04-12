@@ -1,0 +1,53 @@
+@mixin padding-level($direction, $type) {
+  $last-num: 4;
+  $padding-array: map-get($levels, $type);
+  padding-#{$direction}: nth($padding-array, $last-num);
+
+  @if $direction == 'horizontal' {
+    @include breakpoint(xlarge down) {
+      padding-left: nth($padding-array, 3);
+      padding-right: nth($padding-array, 3);
+    }
+    @include breakpoint(large down) {
+      padding-left: nth($padding-array, 2);
+      padding-right: nth($padding-array, 2);
+    }
+    @include breakpoint(medium down) {
+      padding-left: nth($padding-array, 1);
+      padding-right: nth($padding-array, 1);
+    }
+  } @else if $direction == 'vertical' {
+    @include breakpoint(xlarge down) {
+      padding-top: nth($padding-array, 3);
+      padding-bottom: nth($padding-array, 3);
+    }
+    @include breakpoint(large down) {
+      padding-top: nth($padding-array, 2);
+      padding-bottom: nth($padding-array, 2);
+    }
+    @include breakpoint(medium down) {
+      padding-top: nth($padding-array, 1);
+      padding-bottom: nth($padding-array, 1);
+    }
+  } @else if $direction == 'all' {
+    @include breakpoint(xlarge down) {
+      padding: nth($padding-array, 3);
+    }
+    @include breakpoint(large down) {
+      padding: nth($padding-array, 2);
+    }
+    @include breakpoint(medium down) {
+      padding: nth($padding-array, 1);
+    }
+  } @else {
+    @include breakpoint(xlarge down) {
+      padding-#{$direction}: nth($padding-array, 3);
+    }
+    @include breakpoint(large down) {
+      padding-#{$direction}: nth($padding-array, 2);
+    }
+    @include breakpoint(medium down) {
+      padding-#{$direction}: nth($padding-array, 1);
+    }
+  }
+}

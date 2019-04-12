@@ -1,0 +1,19 @@
+doctype html
+html.no-js(lang='ru')
+  include components/service/_head
+  body
+    .grid-container
+      .grid-x.grid-padding-x: .cell
+        .info
+        h1 Магазин "Эстет"
+    
+    .grid-container.info
+      .grid-x.grid-padding-x: .cell
+        ul.tabs#product-tabs-1(data-tabs, data-deep-link='true')
+          li.tabs-title.is-active
+            a(href='#shop') Магазин
+
+        .tabs-content(data-tabs-content="product-tabs-1")
+          .tabs-panel.is-active#shop
+            include components/shop/_sitemap
+    include components/service/_js

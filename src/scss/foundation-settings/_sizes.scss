@@ -1,0 +1,28 @@
+// typography
+$font-sizes: (
+  //          320            768           1024           1920+
+  h1:   (rem-calc(30),  rem-calc(36),  rem-calc(48),  rem-calc(48), 1,),
+  h2:   (rem-calc(26),  rem-calc(30),  rem-calc(40),  rem-calc(44), 1.1,),
+  h3:   (rem-calc(24),  rem-calc(26),  rem-calc(32),  rem-calc(36), 1.2,),
+  h4:   (rem-calc(22),  rem-calc(24),  rem-calc(24),  rem-calc(28), 1.3,),
+  h5:   (rem-calc(20),  rem-calc(22),  rem-calc(22),  rem-calc(24), 1.4,),
+  h6:   (rem-calc(18),  rem-calc(18),  rem-calc(18),  rem-calc(22), 1.5,),
+  nav:  (rem-calc(20),  rem-calc(20),  rem-calc(20),  rem-calc(20), 1,),
+  p1:   (rem-calc(16),  rem-calc(16),  rem-calc(18),  rem-calc(18), 1,),
+  p2:   (rem-calc(14),  rem-calc(14),  rem-calc(16),  rem-calc(16), 1,),
+  p3:   (rem-calc(12),  rem-calc(12),  rem-calc(14),  rem-calc(14), 1,),
+  p4:   (rem-calc(12),  rem-calc(12),  rem-calc(12),  rem-calc(12), 1,),
+);
+
+// margins & paddings sizes
+$levels: (
+  //          320            768          1024          1920+ 
+  blue:   (rem-calc(4),  rem-calc(4),  rem-calc(4),  rem-calc(4),  ),
+  red:    (rem-calc(8),  rem-calc(16), rem-calc(16), rem-calc(16), ),
+  orange: (rem-calc(12), rem-calc(24), rem-calc(24), rem-calc(24), ),
+  yellow: (rem-calc(16), rem-calc(32), rem-calc(32), rem-calc(32), ),
+  green:  (rem-calc(24), rem-calc(40), rem-calc(40), rem-calc(48), ),
+  cyan:   (rem-calc(28), rem-calc(48), rem-calc(48), rem-calc(64), ),
+  violet: (rem-calc(36), rem-calc(72), rem-calc(72), rem-calc(96), ),
+  pink:   (rem-calc(56), rem-calc(96), rem-calc(96), rem-calc(120),),
+);
