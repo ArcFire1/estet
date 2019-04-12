@@ -1,5 +1,5 @@
 .responsive-embed {
-  @include margin-level(bottom,red);
+  margin-bottom: rem-calc(16);
   padding-bottom: 56%;
 
   iframe {

@@ -1,6 +1,6 @@
 .step {
   display: flex;
-  @include margin-level(bottom,red);
+  margin-bottom: rem-calc(16);
 
   &__input {
     margin-top: rem-calc(2);

@@ -1,6 +1,6 @@
 .breadcrumbs {
-  @include margin-level(top,red);
-  @include margin-level(bottom,orange);
+  margin-top: rem-calc(16);
+  margin-bottom: rem-calc(24);
 
   a {
     color: $secondary-color;

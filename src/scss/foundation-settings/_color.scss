@@ -1,35 +1,44 @@
 @import 'util/util';
 
 $foundation-palette: (
-  primary: #27bab5,
-  secondary: #634f8e,
-  tertiary: scale-color(#47616e, $lightness: 50%),
-  quaternary: #48626F,
+  primary: #543371,
+  secondary: #8835d1,
   success: scale-color(#27bab5, $lightness: -15%),
-  warning: #EEB301,
+  warning: #fe6b03,
+  action: #f63908,
   alert: #cc4b37,
-  main: #fafafa,
-  sky: #f2f2f2,
+  main: #623d82,
+  yellow: #ffe534,
+  light-main: #6509b7,
   light-gray: #e6e6e6,
   medium-gray: #cacaca,
-  dark-gray: #8a8a8a,
-  black: #444,
-  white: #fff,
+  dark-gray: #4b576d,
+  light-green: #16c485,
+  light-blue: #078fe3,
+  pink: #e70991,
   fb: #3F619C,
   vk: #3E709C,
   twi: #2FA4CC,
   ok: #FC6719,
   insta: #000000,
-  gp: #DB4437
+  gp: #DB4437,
+  black: #000,
+  light-black: #231f20,
+  white: #fff
 );
 $main-color: map-get($foundation-palette, main);
+$light-main: map-get($foundation-palette, light-main);
 $secondary-color: map-get($foundation-palette, secondary);
 $light-gray: map-get($foundation-palette, light-gray);
 $medium-gray: map-get($foundation-palette, medium-gray);
 $dark-gray: map-get($foundation-palette, dark-gray);
-$black: map-get($foundation-palette, black);
-$white: map-get($foundation-palette, white);
-$sky: map-get($foundation-palette, sky);
+$action-color: map-get($foundation-palette, action);
+$alert-color: map-get($foundation-palette, alert);
+$warning-color: map-get($foundation-palette, warning);
+$light-blue: map-get($foundation-palette, light-blue);
+$light-green: map-get($foundation-palette, light-green);
+$pink: map-get($foundation-palette, pink);
+$yellow: map-get($foundation-palette, yellow);
 $tertiary: map-get($foundation-palette, tertiary);
 $quaternary: map-get($foundation-palette, quaternary);
 $fb: map-get($foundation-palette, fb);
@@ -38,4 +47,7 @@ $twi: map-get($foundation-palette, twi);
 $ok: map-get($foundation-palette, ok);
 $insta: map-get($foundation-palette, insta);
 $gp: map-get($foundation-palette, gp);
+$black: map-get($foundation-palette, black);
+$light-black: map-get($foundation-palette, light-black);
+$white: map-get($foundation-palette, white);
 @include add-foundation-colors;

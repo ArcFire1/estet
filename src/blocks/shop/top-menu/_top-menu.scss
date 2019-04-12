@@ -1,0 +1,20 @@
+.top-menu {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &__item {
+    &:not(:last-child) {
+      .top-menu__link {
+        margin-right: rem-calc(35);
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    color: $white;
+    @include font-size(p3);
+  }
+}

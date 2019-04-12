@@ -1,5 +1,5 @@
 .pagination {
-  @include margin-level(bottom,red);
+  margin-bottom: rem-calc(16);
 
   .current {
     background: $secondary-color;

@@ -1,0 +1,38 @@
+.header-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: $primary-color;
+
+  @include breakpoint (large down) {
+    display: none;
+  }
+
+  &__item {
+
+  }
+
+  &__link {
+    display: block;
+    color: $white;
+
+    &_tag {
+      font-weight: 600;
+      color: $yellow;
+
+      .svg-icon {
+        top: rem-calc(5);
+        margin-right: rem-calc(5);
+      }
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $yellow;
+    }
+  }
+}

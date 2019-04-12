@@ -13,16 +13,3 @@ $font-sizes: (
   p3:   (rem-calc(12),  rem-calc(12),  rem-calc(14),  rem-calc(14), 1,),
   p4:   (rem-calc(12),  rem-calc(12),  rem-calc(12),  rem-calc(12), 1,),
 );
-
-// margins & paddings sizes
-$levels: (
-  //          320            768          1024          1920+ 
-  blue:   (rem-calc(4),  rem-calc(4),  rem-calc(4),  rem-calc(4),  ),
-  red:    (rem-calc(8),  rem-calc(16), rem-calc(16), rem-calc(16), ),
-  orange: (rem-calc(12), rem-calc(24), rem-calc(24), rem-calc(24), ),
-  yellow: (rem-calc(16), rem-calc(32), rem-calc(32), rem-calc(32), ),
-  green:  (rem-calc(24), rem-calc(40), rem-calc(40), rem-calc(48), ),
-  cyan:   (rem-calc(28), rem-calc(48), rem-calc(48), rem-calc(64), ),
-  violet: (rem-calc(36), rem-calc(72), rem-calc(72), rem-calc(96), ),
-  pink:   (rem-calc(56), rem-calc(96), rem-calc(96), rem-calc(120),),
-);

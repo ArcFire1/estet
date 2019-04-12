@@ -4,7 +4,7 @@ a {
   -ms-transition: color 300ms ease-in-out;
   -o-transition: color 300ms ease-in-out;
   transition: color 300ms ease-in-out;
-  color: scale-color($secondary-color, $lightness: 20%);
+  color: $secondary-color;
   text-decoration-skip-ink: none;
 
   &:active,
@@ -18,7 +18,7 @@ hr {
   margin-left: auto;
   margin-top: rem-calc(0);
   margin-right: auto;
-  @include margin-level(bottom,red);
+  margin-bottom: rem-calc(16);
   border-bottom: rem-calc(1) solid $light-gray;
 }
 
@@ -27,7 +27,7 @@ label {
 }
 
 table {
-  @include margin-level(bottom,red);
+  margin-bottom: rem-calc(16);
   border-collapse: collapse;
   width: 100%;
   border-radius: rem-calc(4);
@@ -38,7 +38,7 @@ ol,
 p,
 ul {
   line-height: 1.5;
-  @include margin-level(bottom,red);
+  margin-bottom: rem-calc(16);
 }
 
 blockquote {
@@ -52,8 +52,8 @@ blockquote p {
 
 tfoot,
 thead {
-  background: $sky;
-  border: rem-calc(1) solid $sky;
+  background: $light-gray;
+  border: rem-calc(1) solid $light-gray;
 
   td,
   th {
@@ -67,7 +67,7 @@ thead {
 
 tbody {
   background: $white;
-  border: rem-calc(1) solid $sky;
+  border: rem-calc(1) solid $light-gray;
 
   td,
   th {
@@ -75,7 +75,7 @@ tbody {
   }
 
   tr:nth-child(even) {
-    background: $sky;
+    background: $light-gray;
     border-bottom: rem-calc(0);
   }
 }

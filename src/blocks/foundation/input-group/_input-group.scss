@@ -1,7 +1,10 @@
 .input-group {
-  &-button {
-    a {
-      padding-top: rem-calc(7);
+  
+  &_large {
+    margin-bottom: 0;
+
+    .input-group-field {
+      height: rem-calc(56);
     }
   }
 }

@@ -1,0 +1,9 @@
+.top-line
+  .grid-container.grid-container_large
+    .grid-x.grid-padding-x.align-middle
+      .cell.auto
+        ul.top-menu
+          each i in ['О компании', 'Условия работы', 'Условия оплаты', 'Вопрос-ответ']
+            li.top-menu__item: a.top-menu__link(href="#")= i
+      .cell.shrink
+        a.top-line__tel(href="tel:+74952504545") +7 (495) 250-45-45

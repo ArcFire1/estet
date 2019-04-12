@@ -1,0 +1,37 @@
+header.header
+  .grid-container.grid-container_large
+    .grid-x.grid-padding-x.align-middle
+      .cell.shrink.hide-for-large
+        button.hamburger: i.fa.fa-2x.fa-bars
+      .cell.xlarge-shrink
+        a(href="#")
+          img.header__logo(src="./i/logo-white.png" alt="Logo")
+      .cell.shrink
+        button.button.button_humb.catalog-toggler Каталог товаров #[i.fa.fa-2x.fa-bars]
+      .cell.auto
+        .grid-x
+          .cell.shrink
+            button.button.button_humb.hide-for-xlarge(data-toggle="header-menu") Меню #[i.fa.fa-2x.fa-bars]
+          .cell.auto
+            nav.header-menu-wrapper
+              ul.header-menu#header-menu(data-toggler=".header-menu_active")
+                li.header-menu__item: a.header-menu__link.header-menu__link_tag(href="#")
+                  include ../../../images/tag.svg
+                  | Акции
+                each item in ['Новинки', 'Прайс-листы', 'Новости', 'Контакты']
+                  li.header-menu__item: a.header-menu__link(href="#")= item
+      
+      .cell.shrink
+        .input-group.input-group_large
+          input.input-group-field(type="search" placeholder="Например: кастрюля" data-short-placeholder="search")
+          .input-group-button
+            input.button(type="submit" value="Найти")
+      
+      .cell.xlarge-3
+        ul.user-menu
+          li.user-menu__item: a.user-menu__link(href="#") 
+            include ../../../images/heart.svg
+          li.user-menu__item: a.user-menu__link(href="#")
+            include ../../../images/cart.svg
+          li.user-menu__item: a.user-menu__link(href="#")
+            include ../../../images/profile.svg

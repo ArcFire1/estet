@@ -1,0 +1,10 @@
+.top-line {
+  padding: rem-calc(10 0);
+  background-color: $main-color;
+
+  &__tel {
+    color: $white;
+    font-weight: 600;
+    @include font-size(p1);
+  }
+}

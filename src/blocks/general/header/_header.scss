@@ -1,0 +1,8 @@
+.header {
+  background-color: $primary-color;
+
+  &__logo {
+    margin: rem-calc(15 0 25 0);
+    height: 65px;
+  }
+}

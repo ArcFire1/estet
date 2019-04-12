@@ -1,5 +1,5 @@
 .callout {
-  @include margin-level(bottom,red);
+  margin-bottom: rem-calc(16);
   padding: 6 * $global-padding;
 
   &_st {

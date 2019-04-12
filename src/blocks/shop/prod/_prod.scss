@@ -4,7 +4,7 @@
   align-items: flex-start;
 
   &__info {
-    @include margin-level(bottom,red);
+    margin-bottom: rem-calc(16);
   }
 
   &__favor {
@@ -30,7 +30,7 @@
   }
 
   &__rub {
-    @include margin-level(bottom,blue);
+    margin-bottom: rem-calc(4);
   }
 
   &__main {
@@ -38,6 +38,6 @@
   }
 
   &__img {
-    @include margin-level(bottom,red);
+    margin-bottom: rem-calc(16);
   }
 }
