@@ -1,7 +1,24 @@
 .mark {
-  color: $warning-color;
-  font-size: rem-calc(18);
-  line-height: 0.75;
-  margin-bottom: rem-calc(21);
-  vertical-align: rem-calc(-1);
+  position: relative;
+  display: block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &__item {
+    display: inline-block;
+    height: rem-calc(5);
+    width: rem-calc(5);
+    background-color: $medium-gray;
+    border: none;
+    border-radius: 50%;
+
+    &:not(:last-child) {
+      margin-right: rem-calc(7);
+    }
+
+    &_fill {
+      background-color: $primary-color;
+    }
+  }
 }

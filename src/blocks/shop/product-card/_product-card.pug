@@ -1,0 +1,8 @@
+mixin product-card(newItem, sale, imgSrc)
+  .product-card
+    if newItem
+      span.product-card__new Новинка
+    if sale
+      span.product-card__sale Хит продаж
+    img.product-card__image(src=imgSrc alt="Product image")
+    +mark()

@@ -19,7 +19,8 @@ html.no-js(lang='ru')
     include ../blocks/general/dd/_dd
     
     include ../blocks/shop/quant/_quant
-    include ../blocks/shop/prod/_prod
+    include ../blocks/shop/mark/_mark
+    include ../blocks/shop/product-card/_product-card
     include ../blocks/shop/advert-poster/_advert-poster
     
     //- header and top-line
@@ -29,6 +30,13 @@ html.no-js(lang='ru')
     //- main content
     block page
       include ../blocks/shop/main-carousel/_main-carousel
+
+      section.products
+        .grid-container
+          h2.products__title Новинки
+          .products-container
+            +product-card()
+            
       
     include components/shop/_footer
     include components/service/_js

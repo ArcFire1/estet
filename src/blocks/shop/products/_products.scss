@@ -1,0 +1,12 @@
+.products {
+  margin-top: rem-calc(75);
+
+  &__title {
+    display: block;
+    margin-bottom: 0;
+    text-align: center;
+    font-weight: 700;
+    font-size: rem-calc(32);
+    color: $primary-color;
+  }
+}
