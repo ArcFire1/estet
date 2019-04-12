@@ -2,17 +2,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0;
+  margin: rem-calc(0 40);
   padding: 0;
   list-style: none;
   background-color: $primary-color;
 
   @include breakpoint (large down) {
     display: none;
-  }
-
-  &__item {
-
   }
 
   &__link {

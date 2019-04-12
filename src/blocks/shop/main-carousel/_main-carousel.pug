@@ -1,0 +1,12 @@
+.main-carousel
+  each i in [1,2,3]
+    .main-carousel__item
+      .grid-container.grid-container_large.grid-x.grid-padding-x.advert
+        .cell.xlarge-6
+          +advert-poster('./i/slider-left.png', 'advert-poster_left', false)
+          h2.advert__title Кастрюли #[span.advert__subtitle Из нержавеющей стали]
+          p.advert__text Оцените лучшее
+          a.button.button_action(href="#") Подробнее
+          +advert-poster('./i/slider-right.png', 'advert-poster_right', true)
+
+          

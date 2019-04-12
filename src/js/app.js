@@ -26,13 +26,16 @@ $(document).foundation();
     });
 
     /** Carousel */
-    $(".carousel-services").slick({
+    $(".main-carousel").slick({
       infinite: true,
       dots: true,
-      arrows: false,
+      arrows: true,
+      prevArrow: '<button type="button" class="slick-prev"><img class="slick-arrows" src="./images/slider-arrow.svg" alt="arrow"></button>',
+      nextArrow: '<button type="button" class="slick-next"><img class="slick-arrows" src="./images/slider-arrow.svg" alt="arrow"></button>',
       slidesToShow: 1,
       slidesToScroll: 1,
-      autoplay: true,
+      autoplay: false,
+      fade: true,
       autoplaySpeed: 5000,
       autoplayHoverPause: true
     });

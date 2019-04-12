@@ -1,0 +1,5 @@
+mixin advert-poster(img, customClass, isNew)
+  .advert-poster(class=customClass)
+    img.advert-poster__image(src=img, alt="Advert image")
+    if isNew
+      span.advert-poster__tag Новинка

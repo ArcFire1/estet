@@ -1,0 +1,27 @@
+.advert {
+  position: relative;
+  justify-content: center;
+
+  &__title {
+    font-weight: 700;
+    font-size: rem-calc(50);
+    color: $black;
+  }
+
+  &__subtitle {
+    display: block;
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: rem-calc(32);
+    line-height: rem-calc(30);
+  }
+
+  &__text {
+    display: block;
+    margin-bottom: rem-calc(35);
+    font-weight: 700;
+    font-style: italic;
+    font-size: rem-calc(32);
+    color: $red;
+  }
+}

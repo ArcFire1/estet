@@ -7,8 +7,10 @@ $foundation-palette: (
   warning: #fe6b03,
   action: #f63908,
   alert: #cc4b37,
+  red: #ea0202,
   main: #623d82,
   yellow: #ffe534,
+  medium-yellow: #ffc518,
   light-main: #6509b7,
   light-gray: #e6e6e6,
   medium-gray: #cacaca,
@@ -39,6 +41,8 @@ $light-blue: map-get($foundation-palette, light-blue);
 $light-green: map-get($foundation-palette, light-green);
 $pink: map-get($foundation-palette, pink);
 $yellow: map-get($foundation-palette, yellow);
+$red: map-get($foundation-palette, red);
+$medium-yellow: map-get($foundation-palette, medium-yellow);
 $tertiary: map-get($foundation-palette, tertiary);
 $quaternary: map-get($foundation-palette, quaternary);
 $fb: map-get($foundation-palette, fb);

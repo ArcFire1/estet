@@ -1,0 +1,31 @@
+.advert-poster {
+  position: absolute;
+
+  &_left {
+    top: 0;
+    left: 0;
+  }
+
+  &_right {
+    top: 0;
+    right: 0;
+  }
+
+  &__image {
+    max-height: 100%;
+  }
+
+  &__tag {
+    position: absolute;
+    bottom: rem-calc(40);
+    left: rem-calc(50);
+    padding: rem-calc(10 18);
+    font-weight: 700;
+    font-size: rem-calc(24);
+    color: $white;
+    text-transform: uppercase;
+    letter-spacing: rem-calc(0.8);
+    border-radius: rem-calc(10);
+    background-color: $action-color;
+  }
+}
