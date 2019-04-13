@@ -10,20 +10,43 @@ $(document).foundation();
       Foundation.reInit('equalizer');
     }
 
+    /** catalog width */
+
+    function calcCatalogWidth() {
+      const catalog = $('.catalog');
+      let width = $(window).width();
+      let calcTop = $('.header').outerHeight() + $('.top-line').outerHeight();
+
+      catalog.css({'width': width, top: calcTop});
+    }
+
+    $(window).on('load', function() {
+      calcCatalogWidth();
+    });
+
+    $(window).on('resize', function() {
+      calcCatalogWidth();
+    });
+
     /** .quant input activity */
     $('.quant').each(function () {
       const $input = $(this).find('.quant__input');
-      let currentNum = Math.max(+$input.val(), 0);
+      let initNum = 1;
       $(this).find('.quant__plus').on('click', function () {
-        $input.val(++currentNum);
+        $input.val(++initNum + 'шт');
       });
 
       $(this).find('.quant__minus').on('click', function () {
-        if (currentNum >= 2) {
-          $input.val(--currentNum);
+        if (initNum >= 2) {
+          $input.val(--initNum + 'шт');
         }
       });
     });
+
+    /** fav button toggler */
+    $('.product-card__fav').click(function() {
+      $(this).toggleClass('product-card__fav_active');
+    })
 
     /** Carousel */
     $(".main-carousel").slick({

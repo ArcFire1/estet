@@ -1,8 +1,21 @@
 mixin product-card(newItem, sale, imgSrc)
   .product-card
     if newItem
-      span.product-card__new Новинка
+      span.product-card__label.product-card__label_new Новинка
     if sale
-      span.product-card__sale Хит продаж
-    img.product-card__image(src=imgSrc alt="Product image")
-    +mark()
+      span.product-card__label.product-card__label_sale Хит продаж
+    .product-card__wrapper
+      .product-card__head
+        .product-card__image(style="background-image: url("+ imgSrc +")")
+        +mark()
+      .product-card__content
+        .product-card__container
+          span.product-card__code Артикул: 49028
+          button.product-card__fav: i.fas.fa-heart
+        h4.product-card__title Кофеварка ЭТ-72209 красная 0,4 л *6
+        p.product-card__count В наличии: более 100 шт
+        form.product-card__form(method="POST" action="#")
+          p.product-card__price 7 340 ₽
+          .flex-container
+            +quant('quant_right')
+            button.button.button_buy.button_bottom(type="submit") Купить

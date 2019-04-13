@@ -12,9 +12,10 @@ $foundation-palette: (
   yellow: #ffe534,
   medium-yellow: #ffc518,
   light-main: #6509b7,
-  light-gray: #e6e6e6,
-  medium-gray: #cacaca,
+  light-gray: #e2e2e2,
+  medium-gray: #d8d8d8,
   dark-gray: #4b576d,
+  darken-gray: #353844,
   light-green: #16c485,
   light-blue: #078fe3,
   pink: #e70991,
@@ -26,6 +27,7 @@ $foundation-palette: (
   gp: #DB4437,
   black: #000,
   light-black: #231f20,
+  lighten-black: #2d2d2d,
   white: #fff
 );
 $main-color: map-get($foundation-palette, main);
@@ -34,6 +36,7 @@ $secondary-color: map-get($foundation-palette, secondary);
 $light-gray: map-get($foundation-palette, light-gray);
 $medium-gray: map-get($foundation-palette, medium-gray);
 $dark-gray: map-get($foundation-palette, dark-gray);
+$darken-gray: map-get($foundation-palette, darken-gray);
 $action-color: map-get($foundation-palette, action);
 $alert-color: map-get($foundation-palette, alert);
 $warning-color: map-get($foundation-palette, warning);
@@ -53,5 +56,6 @@ $insta: map-get($foundation-palette, insta);
 $gp: map-get($foundation-palette, gp);
 $black: map-get($foundation-palette, black);
 $light-black: map-get($foundation-palette, light-black);
+$lighten-black: map-get($foundation-palette, lighten-black);
 $white: map-get($foundation-palette, white);
 @include add-foundation-colors;

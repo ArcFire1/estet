@@ -1,0 +1,16 @@
+.catalog {
+  position: absolute;
+  padding: rem-calc(37 0);
+  left: 0;
+  background-color: $darken-gray;
+  width: 100%;
+  z-index: 1000;
+
+  &-wrapper {
+    
+  }
+
+  &_hidden {
+    display: none;
+  }
+}

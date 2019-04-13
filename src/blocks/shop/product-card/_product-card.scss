@@ -1,0 +1,124 @@
+.product-card {
+  position: relative;
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: rem-calc(20 25 20 35);
+    border-radius: rem-calc(5);
+    transition: 0.3s;
+
+    &:hover {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      box-shadow: rem-calc(0 0 37 0) #d0e4ed;
+
+      .product-card__form {
+        flex-wrap: wrap;
+        padding-bottom: rem-calc(15);
+      }
+
+      .product-card__price {
+        margin-bottom: rem-calc(15);
+        width: 100%;
+      }
+
+      .quant {
+        display: flex;
+      }
+    }
+  }
+
+  &__head {
+    position: relative;
+    margin-bottom: rem-calc(10);
+  }
+
+  &__image {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center bottom;
+    height: rem-calc(160);
+  }
+
+  &__label {
+    position: absolute;
+    top: rem-calc(-35);
+    left: 50%;
+    transform: translateX(-50%);
+    padding: rem-calc(3 10);
+    min-width: rem-calc(110);
+    font-weight: 700;
+    font-size: rem-calc(12);
+    text-transform: uppercase;
+    color: $primary-color;
+    text-align: center;
+    border: rem-calc(1) solid $primary-color;
+    border-radius: rem-calc(3);
+
+    &_new {
+      color: $pink;
+      border-color: $pink;
+    }
+
+    &_sale {
+      color: $light-green;
+      border-color: $light-green;
+    }
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__code {
+    align-self: flex-end;
+    margin-bottom: 0;
+    font-size: rem-calc(12);
+    color: $black;
+  }
+
+  &__fav {
+    font-size: rem-calc(19);
+    color: $light-gray;
+    cursor: pointer;
+
+    &_active {
+      color: $primary-color;
+    }
+  }
+
+  &__title {
+    display: block;
+    margin: rem-calc(11 0);
+    font-size: rem-calc(16);
+    font-weight: 600;
+    line-height: 1.25;
+    color: $black;
+  }
+
+  &__count {
+    font-size: rem-calc(12);
+    color: $black;
+  }
+
+  &__form {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__price {
+    margin-bottom: 0;
+    font-weight: 700;
+    font-size: rem-calc(24);
+    color: $black;
+  }
+
+  .quant {
+    display: none;
+  }
+}

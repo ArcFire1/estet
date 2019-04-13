@@ -30,13 +30,27 @@ html.no-js(lang='ru')
     //- main content
     block page
       include ../blocks/shop/main-carousel/_main-carousel
-
-      section.products
-        .grid-container
+      .grid-container
+        section.products
           h2.products__title Новинки
-          .products-container
-            +product-card()
-            
+          .grid-x.large-up-5
+            each card in [1,2,3]
+              .cell: +product-card(false, false, './i/products/product-' + card +'.png')
+            .cell: +product-card(true, false, './i/products/product-4.png')
+            .cell: +product-card(false, true, './i/products/product-5.png')
+
+        section.promo-cards
+          .grid-x.grid-padding-x
+            .cell.large-12
+              a.promo-card.promo-card_medium(href="#" style="background-image: url(./i/sales.jpg)")
+              .grid-x.grid-padding-x
+                .cell.large-12
+                  a.promo-card.promo-card_small(href="#" style="background-image: url()")
+                .cell.large-12
+                  a.promo-card.promo-card_small(href="#" style="background-image: url()")
+            .cell.large-12
+              a.promo-card.promo-card_large(href="#" style="background-image: url(./i/gifts.jpg)")
+
       
     include components/shop/_footer
     include components/service/_js

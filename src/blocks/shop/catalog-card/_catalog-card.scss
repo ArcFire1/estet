@@ -1,0 +1,18 @@
+.catalog-card {
+  position: relative;
+  margin-bottom: rem-calc(30);
+  padding: rem-calc(14 21);
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: $white;
+  border-radius: rem-calc(8);
+
+  &__title,
+  &__subtitle {
+    display: block;
+    font-size: rem-calc(20);
+    font-weight: 600;
+    color: $black;
+  }
+}

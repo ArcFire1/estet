@@ -1,0 +1,19 @@
+.promo-card {
+  display: block;
+  margin-bottom: rem-cac(23);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &_large {
+    min-height: rem-calc(570);
+  }
+
+  &_medium {
+    min-height: rem-calc(270);
+  }
+
+  &_small {
+    min-height: rem-calc(275);
+  }
+}

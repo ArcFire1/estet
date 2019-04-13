@@ -69,4 +69,10 @@
     line-height: rem-calc(30);
     border-radius: rem-calc(8);
   }
+
+  &_buy {
+    padding: rem-calc(8 15);
+    font-size: rem-calc(14);
+    font-weight: 600;
+  }
 }
