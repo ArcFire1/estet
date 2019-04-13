@@ -5,6 +5,12 @@
   &__tel {
     color: $white;
     font-weight: 600;
-    @include font-size(p1);
+    font-size: rem-calc(18);
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $yellow;
+    }
   }
 }

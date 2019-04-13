@@ -11,7 +11,7 @@
     &:hover,
     &:focus,
     &:active {
-      color: scale-color($white, $lightness: -30%);
+      color: $yellow;
     }
   }
 
@@ -23,7 +23,7 @@
       &:hover,
       &:focus,
       &:active {
-        border-color: scale-color($white, $lightness: -30%);
+        border-color: $yellow;
       }
     }
   }
