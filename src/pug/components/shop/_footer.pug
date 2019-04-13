@@ -1,2 +1,40 @@
 footer.footer
-  
+  .grid-container: .grid-x.grid-padding-x(data-equalizer="columns")
+    .cell.large-6
+      .footer-column(data-equalizer-watch="columns")
+        h4.footer-column__title Контакты
+        p.footer-contacts
+          | #[span.footer-contacts__address Санкт-Петербург,  ул. Софийская, д. 54.] 
+          | #[a.footer-contacts__tel(href="tel:+88007002227") 8 (800) 700-222-7], 
+          | #[a.footer-contacts__tel(href="tel:+881267688855") 8 (812) 676-888-55] 
+          | #[a.footer-contacts__email(href="mailto:ishop@estet.ru") ishop@estet.ru]
+        
+        .footer__copy &copy; 2019 Эстет | Создано Dobrosite 
+
+    .cell.large-6
+      .footer-column(data-equalizer-watch="columns")
+        h4.footer-column__title Покупателям
+        ul.footer-list
+          each i in ['О компании', 'Условия работы', 'Реквизиты', 'Прайс-листы', 'Новинки', 'Акции', 'Новости', 'Статьи']
+            li: a.footer-list__item(href="#")= i
+
+    .cell.large-6
+      .footer-column(data-equalizer-watch="columns")
+        h4.footer-column__title Оформление заказа
+        ul.footer-list
+          each i in ['Помощь', 'Как сделать заказ', 'Доставка', 'Оплата', 'Возврат', 'Отзывы', 'Вопросы и ответ', 'Карта сайта']
+            li: a.footer-list__item(href="#")= i
+
+    .cell.large-6
+      .footer-column(data-equalizer-watch="columns")
+        h4.footer-column__title Обратная связь
+        ul.footer-list.footer-list_dotted
+          each i in ['Задать вопрос', 'Написать директору']
+            li: a.footer-list__item(href="#")= i
+
+        ul.footer-soc
+          li.footer-soc__item: a.footer-soc__link(href="#"): i.fab.fa-facebook-f
+          li.footer-soc__item: a.footer-soc__link(href="#"): i.fab.fa-vk
+          li.footer-soc__item: a.footer-soc__link(href="#"): i.fab.fa-youtube
+          li.footer-soc__item: a.footer-soc__link(href="#"): i.fab.fa-odnoklassniki
+        p.footer-column__text Политика обработки персональных данных  

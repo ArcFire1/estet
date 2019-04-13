@@ -1,0 +1,73 @@
+.products-carousel {
+  margin-top: rem-calc(-45);
+  margin-left: rem-calc(-20);
+  margin-right: rem-calc(-20);
+  padding-top: rem-calc(45);
+  padding-left: rem-calc(20);
+  padding-right: rem-calc(20);
+  overflow: hidden;
+
+  &-wrapper {
+    position: relative;
+
+    .slick-arrow {
+      padding: rem-calc(16);
+      height: rem-calc(50);
+      width: rem-calc(50);
+      border-radius: 50%;
+      background-color: $white;
+      box-shadow: rem-calc(0 4 10 0) rgba(0, 0, 0, 0.11);
+      z-index: 500;
+  
+      &.slick-prev {
+        left: rem-calc(-50);
+        .slick-arrows {
+          transform: rotate(180deg);
+        }
+      }
+  
+      &.slick-next {
+        right: rem-calc(-50);
+      }
+    }
+  }
+
+  .slick-list {
+    position: relative;
+    z-index: 100;
+    overflow: visible;
+  }
+
+  .slick-active {
+    &:first-child {
+      margin-left: 15px;
+    }
+
+    &:last-child {
+      margin-left: 15px;
+    }
+  }
+
+  .slick-dots {
+    position: relative;
+    z-index: 1;
+    margin: rem-calc(15 0);
+
+    li {
+
+      button {
+        height: rem-calc(6);
+        width: rem-calc(6);
+        background-color: $dots-color;
+      }
+
+      &.slick-active {
+        button {
+          background-color: $primary-color;
+          height: rem-calc(11);
+          width: rem-calc(11);
+        }
+      }
+    }
+  }
+}

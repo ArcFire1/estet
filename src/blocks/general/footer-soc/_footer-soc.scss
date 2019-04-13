@@ -1,0 +1,28 @@
+.footer-soc {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto 0 0 0;
+  padding: 0;
+  list-style: none;
+
+  &__item {
+    &:not(:last-child) {
+      .footer-soc__link {
+        margin-right: rem-calc(30);
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    margin: rem-calc(20 0);
+    font-size: rem-calc(24);
+    color: $white;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: scale-color($white, $lightness: -30%);
+    }
+  }
+}

@@ -71,6 +71,7 @@
   }
 
   &_buy {
+    flex: 0 0 auto;
     padding: rem-calc(8 15);
     font-size: rem-calc(14);
     font-weight: 600;

@@ -1,0 +1,20 @@
+.footer-contacts {
+  font-size: rem-calc(12);
+    line-height: 1.67;
+    color: $white;
+  &__address {
+    display: block;
+  }
+
+  &__tel,
+  &__email {
+    display: inline-block;
+    color: $white;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: scale-color($white, $lightness: -30%);
+    }
+  }
+}

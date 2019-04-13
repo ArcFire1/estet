@@ -1,0 +1,10 @@
+.newsletter-form {
+  display: flex;
+  height: rem-calc(60);
+
+  &__input {
+    margin-right: rem-calc(7);
+    margin-bottom: 0;
+    height: 100% !important;
+  }
+}

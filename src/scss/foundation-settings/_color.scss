@@ -14,10 +14,12 @@ $foundation-palette: (
   light-main: #6509b7,
   light-gray: #e2e2e2,
   medium-gray: #d8d8d8,
+  dots: #999999,
   dark-gray: #4b576d,
   darken-gray: #353844,
   light-green: #16c485,
   light-blue: #078fe3,
+  news-bg: #eff5f7,
   pink: #e70991,
   fb: #3F619C,
   vk: #3E709C,
@@ -58,4 +60,6 @@ $black: map-get($foundation-palette, black);
 $light-black: map-get($foundation-palette, light-black);
 $lighten-black: map-get($foundation-palette, lighten-black);
 $white: map-get($foundation-palette, white);
+$dots-color: map-get($foundation-palette, dots);
+$news-bg: map-get($foundation-palette, news-bg);
 @include add-foundation-colors;

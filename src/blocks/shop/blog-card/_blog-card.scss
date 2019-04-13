@@ -1,0 +1,91 @@
+.blog-card {
+  position: relative;
+  margin-bottom: rem-calc(20);
+  border: rem-calc(1) solid $light-gray;
+
+  &__head {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: rem-calc(270);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: linear-gradient(to left, rgba(134, 84, 175, 0), #8654af);
+
+    &_yellow {
+      background-color: #ffe516;
+    }
+  }
+
+  &__label {
+    position: absolute;
+    top: rem-calc(57);
+    left: rem-calc(24);
+    font-family: $font-lato;
+    font-size: rem-calc(39);
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.62);
+  }
+
+  &__content {
+    padding: rem-calc(25 23);
+  }
+
+  &__title {
+    display: block;
+    font-size: rem-calc(18);
+    font-weight: 700;
+    line-height: 1.33;
+    color: $black;
+  }
+
+  &__text {
+    font-size: rem-calc(16);
+    line-height: 1.5;
+    color: $black;
+  }
+
+  &__link {
+    font-size: rem-calc(18);
+    font-weight: 600;
+    color: $primary-color;
+    text-transform: uppercase;
+  }
+
+  &_large {
+    min-height: rem-calc(400);
+    background-color: #42d6fb;
+
+    .blog-card__image {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      max-width: rem-calc(387);
+      transform: translate(-50%, -50%);
+    }
+
+    .blog-card__content {
+      position: absolute;
+      padding-bottom: rem-calc(15);
+      left: 0;
+      bottom: 0;
+    }
+
+    .blog-card__title {
+      font-size: rem-calc(28);
+      font-weight: bold;
+      color: $white;
+    }
+    
+    .blog-card__link {
+      color: rgba(255, 255, 255, 0.66);
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: scale-color(rgba(255, 255, 255, 0.66), $lightness: 30%)
+      }
+    }
+  }
+}

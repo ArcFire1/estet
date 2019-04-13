@@ -1,0 +1,10 @@
+.footer {
+  padding: rem-calc(31 0 51 0);
+  background-color: $main-color;
+  font-size: rem-calc(12);
+  color: $white;
+
+  &__copy {
+    margin-top: auto;
+  }
+}

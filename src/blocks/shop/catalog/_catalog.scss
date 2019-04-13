@@ -6,8 +6,24 @@
   width: 100%;
   z-index: 1000;
 
-  &-wrapper {
-    
+  &-inner {
+    position: relative;
+  }
+
+  &-close {
+    position: absolute;
+    left: 100%;
+    font-size: rem-calc(32);
+    opacity: 0.6;
+    transition: 0.3s ease;
+    z-index: 1000;
+    cursor: pointer;
+
+    &:hover,
+    &:focus,
+    &:active {
+      opacity: 1;
+    }
   }
 
   &_hidden {
