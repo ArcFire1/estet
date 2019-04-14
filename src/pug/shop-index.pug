@@ -33,25 +33,25 @@ html.no-js(lang='ru')
       .grid-container
         section.section
           h2.section__title Новинки
-          .grid-x.large-up-5
+          .grid-x.medium-up-3.large-up-4.xlarge-up-5.section-goods(data-equalizer="cards")
             each card in [1,2,3]
-              .cell: +product-card(false, false, './i/products/product-' + card +'.png')
-            .cell: +product-card(true, false, './i/products/product-4.png')
-            .cell: +product-card(false, true, './i/products/product-5.png')
+              .cell(data-equalizer-watch="cards"): +product-card(false, false, './i/products/product-' + card +'.png')
+            .cell(data-equalizer-watch="cards"): +product-card(true, false, './i/products/product-4.png')
+            .cell(data-equalizer-watch="cards"): +product-card(false, true, './i/products/product-5.png')
 
         section.promo-cards
           .grid-x.grid-padding-x
-            .cell.large-12
+            .cell.medium-12
               a.promo-card.promo-card_medium(href="#" style="background-image: url(./i/sales.jpg)")
               .grid-x.grid-padding-x
-                .cell.large-12
+                .cell.medium-12
                   a.promo-card.promo-card_small(href="#" style="background-image: url()")
-                .cell.large-12
+                .cell.medium-12
                   a.promo-card.promo-card_small(href="#" style="background-image: url()")
-            .cell.large-12
+            .cell.medium-12
               a.promo-card.promo-card_large(href="#" style="background-image: url(./i/gifts.jpg)")
 
-        section.section
+        section.section.section_borderless
           h2.section__title Акции
           .products-carousel-wrapper
             .products-carousel
@@ -64,12 +64,12 @@ html.no-js(lang='ru')
 
         section.section
           h2.section__title Новости
-          .grid-x.large-up-3
+          .grid-x.medium-up-3(data-equalizer="news-title" data-equalize-by-row="true")
             .cell: +news-item('./i/news/news-1.jpg', 'Создаем имбирные пряники. Мастер-класс 28 августа')
             .cell: +news-item('./i/news/news-2.jpg', 'Кухонные принадлежности, Посуда для чая и кофе, Столовая посуда')
             .cell: +news-item('./i/news/news-3.jpg', 'Посуда для детей, новинки. Мастер-класс сервировки')
         
-        section.section(data-equalizer="blog-cards" data-equalize-by-row="true")
+        section.section(data-equalizer="blog-cards" data-equalize-by-row="true" data-equalize-on="large")
           h2.section__title Блог
           .grid-x.grid-padding-x(data-equalizer-watch="card-title")
             .cell.auto
@@ -78,20 +78,20 @@ html.no-js(lang='ru')
                 .blog-card__content
                   h4.blog-card__title Посуда для чая и кофе
                   a.blog-card__link(href="#") Подробнее
-            .cell.large-14
-              .grid-x.grid-padding-x.xlarge-up-2
+            .cell.medium-12.large-14
+              .grid-x.grid-padding-x.large-up-2
                 .cell
-                  .blog-card(data-equalizer-watch="blog-cards")
-                    .blog-card__head(style="background-image: url(./i/blog/blog-2.png)")
+                  .grid-x.blog-card(data-equalizer-watch="blog-cards")
+                    .cell.small-10.large-24.blog-card__head(style="background-image: url(./i/blog/blog-2.png)")
                       span.blog-card__label -20%
-                    .blog-card__content
+                    .cell.small-14.large-24.blog-card__content
                       h4.blog-card__title(data-equalizer-watch="card-title") Кухонные принадлежности по новым ценам
                       p.blog-card__text Анонс статьи с картинкой, набор текста для рекламного блока блока например про  статьи с 
                       a.blog-card__link(href="#") Подробнее
                 .cell
-                  .blog-card(data-equalizer-watch="blog-cards")
-                    .blog-card__head.blog-card__head_yellow(style="background-image: url(./i/blog/blog-3.png)")
-                    .blog-card__content
+                  .grid-x.blog-card(data-equalizer-watch="blog-cards")
+                    .cell.small-10.large-24.blog-card__head.blog-card__head_yellow(style="background-image: url(./i/blog/blog-3.png)")
+                    .cell.small-14.large-24.blog-card__content
                       h4.blog-card__title(data-equalizer-watch="card-title") Всё об эмалированной посуде
                       p.blog-card__text Анонс статьи с картинкой, набор текста для рекламного блока блока например про  статьи с 
                       a.blog-card__link(href="#") Подробнее
@@ -99,7 +99,7 @@ html.no-js(lang='ru')
       section.section.section_newsletter
         .grid-container
           .grid-x.grid-padding-x.align-center
-            .cell.large-10
+            .cell.small-12.xlarge-10
               h2.section__title Подписаться на рассылку
               form.newsletter-form(action="#")
                 input.newsletter-form__input(type="email" placeholder="E-mail")

@@ -5,6 +5,10 @@
   padding: 0;
   list-style: none;
 
+  @include breakpoint(medium down) {
+    margin: 0;
+  }
+
   &__link {
     font-size: rem-calc(22);
     color: $white;

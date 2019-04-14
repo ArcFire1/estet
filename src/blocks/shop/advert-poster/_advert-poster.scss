@@ -4,15 +4,43 @@
   &_left {
     top: 0;
     left: 0;
+
+    @include breakpoint(large down) {
+      top: 50%;
+      left: rem-calc(50);
+      transform: translateY(-50%);
+    }
+
+    @include breakpoint(medium down) {
+      left: rem-calc(0);
+    }
   }
 
   &_right {
     top: 0;
     right: 0;
+
+    @include breakpoint(large down) {
+      top: 50%;
+      right: rem-calc(50);
+      transform: translateY(-50%);
+    }
+
+    @include breakpoint(large down) {
+      right: rem-calc(0);
+    }
   }
 
   &__image {
     max-height: 100%;
+
+    @include breakpoint(large down) {
+      max-height: rem-calc(170);
+    }
+
+    @include breakpoint(medium down) {
+      max-height: rem-calc(130);
+    }
   }
 
   &__tag {
@@ -27,5 +55,19 @@
     letter-spacing: rem-calc(0.8);
     border-radius: rem-calc(10);
     background-color: $action-color;
+
+    @include breakpoint(large down) {
+      bottom: rem-calc(20);
+      left: rem-calc(25);
+      padding: rem-calc(9 20);
+      font-size: rem-calc(16);
+    }
+
+    @include breakpoint(medium down) {
+      bottom: rem-calc(10);
+      left: rem-calc(5);
+      padding: rem-calc(7 15);
+      font-size: rem-calc(12);
+    }
   }
 }

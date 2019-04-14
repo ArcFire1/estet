@@ -10,23 +10,35 @@ $(document).foundation();
       Foundation.reInit('equalizer');
     }
 
-    /** catalog width */
+    /** menus positions */
 
-    function calcCatalogWidth() {
-      const catalog = $('.catalog');
+    function calcMenuPos(elem) {
+      const menu = $(elem);
       let width = $(window).width();
       let calcTop = $('.header').outerHeight() + $('.top-line').outerHeight();
 
-      catalog.css({'width': width, top: calcTop});
+      menu.css({'width': width, top: calcTop});
     }
 
     $(window).on('load', function() {
-      calcCatalogWidth();
+      calcMenuPos('.catalog');
     });
 
     $(window).on('resize', function() {
-      calcCatalogWidth();
+      calcMenuPos('.catalog');
     });
+
+    const breakpoint = $(window).width() < 1920;
+
+    if (breakpoint) {
+      $(window).on('load', function() {
+        calcMenuPos('.header-menu');
+      });
+
+      $(window).on('resize', function() {
+        calcMenuPos('.header-menu');
+      });
+    }
 
     /** close catalog */
     $('.catalog-close').click(function() {
@@ -65,7 +77,15 @@ $(document).foundation();
       autoplay: false,
       fade: true,
       autoplaySpeed: 5000,
-      autoplayHoverPause: true
+      autoplayHoverPause: true,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            arrows: false,
+          }
+        }
+      ]
     });
 
     $(".products-carousel").slick({
@@ -79,7 +99,21 @@ $(document).foundation();
       slidesToScroll: 1,
       autoplay: false,
       autoplaySpeed: 5000,
-      autoplayHoverPause: true
+      autoplayHoverPause: true,
+      responsive: [
+        {
+          breakpoint: 1920,
+          settings: {
+            slidesToShow: 4,
+          }
+        },
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+          }
+        }
+      ]
     });
   });
 })(jQuery);

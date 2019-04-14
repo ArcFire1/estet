@@ -3,6 +3,19 @@
 
   &__logo {
     margin: rem-calc(15 0 25 0);
-    height: 65px;
+    height: rem-calc(65);
+
+    @include breakpoint(large down) {
+      height: rem-calc(45);
+    }
+    @include breakpoint(large down) {
+      height: rem-calc(35);
+    }
+  }
+
+  &__toggler {
+    font-size: rem-calc(16);
+    color: $white;
+    cursor: pointer;
   }
 }

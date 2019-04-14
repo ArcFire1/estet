@@ -6,6 +6,14 @@
     font-weight: 700;
     font-size: rem-calc(50);
     color: $black;
+
+    @include breakpoint(large down) {
+      font-size: rem-calc(36);
+    }
+
+    @include breakpoint(medium down) {
+      font-size: rem-calc(28);
+    }
   }
 
   &__subtitle {
@@ -13,7 +21,16 @@
     margin-bottom: 20px;
     font-weight: 400;
     font-size: rem-calc(32);
-    line-height: rem-calc(30);
+    line-height: 1.25;
+
+    @include breakpoint(large down) {
+      margin-bottom: rem-calc(0);
+      font-size: rem-calc(24);
+    }
+
+    @include breakpoint(medium down) {
+      font-size: rem-calc(18);
+    }
   }
 
   &__text {
@@ -23,5 +40,14 @@
     font-style: italic;
     font-size: rem-calc(32);
     color: $red;
+
+    @include breakpoint(large down) {
+      margin-bottom: rem-calc(20);
+      font-size: rem-calc(24);
+    }
+
+    @include breakpoint(medium down) {
+      font-size: rem-calc(18);
+    }
   }
 }

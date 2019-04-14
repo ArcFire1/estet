@@ -5,6 +5,19 @@
 
     .input-group-field {
       height: rem-calc(56);
+      background-color: $placeholder-color;
+
+      &::placeholder {
+        color: $medium-gray;
+      }
+
+      @include breakpoint(large down) {
+        height: rem-calc(54);
+      }
+
+      @include breakpoint(medium down) {
+        height: rem-calc(48);
+      }
     }
   }
 }

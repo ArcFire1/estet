@@ -24,6 +24,10 @@
     &:active {
       opacity: 1;
     }
+
+    @include breakpoint(large down) {
+      display: none;
+    }
   }
 
   &_hidden {

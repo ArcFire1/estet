@@ -7,6 +7,17 @@
   font-weight: 600;
   font-size: rem-calc(16);
   background: $secondary-color;
+  cursor: pointer;
+
+  @include breakpoint(large down) {
+    padding: rem-calc(14 18);
+    font-size: rem-calc(12);
+  }
+
+  @include breakpoint(medium down) {
+    padding: rem-calc(12 14);
+    font-size: rem-calc(11);
+  }
 
   svg {
     margin-left: rem-calc(23);
@@ -24,6 +35,36 @@
     letter-spacing: rem-calc(0.5);
     text-transform: uppercase;
     font-weight: 700;
+
+    @include breakpoint(large down) {
+      padding: rem-calc(14 18);
+      font-weight: 600;
+      font-size: rem-calc(12);
+    }
+
+    @include breakpoint(medium down) {
+      padding: rem-calc(12 14);
+      font-weight: 600;
+      font-size: rem-calc(11);
+    }
+  }
+
+  &_menu {
+    background-color: $medium-green;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: scale-color($medium-green, $lightness: -30%);
+    }
+
+    @include breakpoint(xlarge up) {
+      display: none;
+    }
+
+    @include breakpoint(medium down) {
+      display: none;
+    }
   }
 
   &_large {
@@ -68,6 +109,12 @@
     font-size: rem-calc(24);
     line-height: rem-calc(30);
     border-radius: rem-calc(8);
+
+    @include breakpoint(large down) {
+      padding: rem-calc(12 20);
+      font-size: rem-calc(16);
+      line-height: 1;
+    }
   }
 
   &_buy {

@@ -12,5 +12,10 @@
     &:active {
       color: $yellow;
     }
+
+    @include breakpoint(large down) {
+      font-weight: 400;
+      font-size: rem-calc(16)
+    }
   }
 }

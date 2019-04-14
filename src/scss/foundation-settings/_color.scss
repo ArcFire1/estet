@@ -18,8 +18,10 @@ $foundation-palette: (
   dark-gray: #4b576d,
   darken-gray: #353844,
   light-green: #16c485,
+  medium-green: #19ab77,
   light-blue: #078fe3,
   news-bg: #eff5f7,
+  placeholder: #eeeff3,
   pink: #e70991,
   fb: #3F619C,
   vk: #3E709C,
@@ -44,6 +46,7 @@ $alert-color: map-get($foundation-palette, alert);
 $warning-color: map-get($foundation-palette, warning);
 $light-blue: map-get($foundation-palette, light-blue);
 $light-green: map-get($foundation-palette, light-green);
+$medium-green: map-get($foundation-palette, medium-green);
 $pink: map-get($foundation-palette, pink);
 $yellow: map-get($foundation-palette, yellow);
 $red: map-get($foundation-palette, red);
@@ -61,5 +64,6 @@ $light-black: map-get($foundation-palette, light-black);
 $lighten-black: map-get($foundation-palette, lighten-black);
 $white: map-get($foundation-palette, white);
 $dots-color: map-get($foundation-palette, dots);
+$placeholder-color: map-get($foundation-palette, placeholder);
 $news-bg: map-get($foundation-palette, news-bg);
 @include add-foundation-colors;

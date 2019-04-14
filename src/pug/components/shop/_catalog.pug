@@ -1,0 +1,46 @@
+.catalog-wrapper
+  button.button.button_humb(data-toggle="main-catalog") Каталог товаров #[i.fa.fa-2x.fa-bars]
+  .catalog.catalog_hidden#main-catalog(data-toggler=".catalog_hidden")
+    .grid-container.catalog-inner
+      button.catalog-close
+        include ../../../images/close.svg
+      .grid-x.grid-padding-x(data-equalizer="catalog-card" data-equalize-by-row="true")
+        .cell.large-11
+          .catalog-card(style="background-image: url(./i/cat-1.jpg)" data-equalizer-watch="catalog-card")
+            h4.catalog-card__title Посуда для приготовления
+            ul.catalog-list
+              each listItem in ['Баки (67)', 'Наборы посуды (89)', 'Кастрюли (67)', 'Ковши (23)', 'Лотки (21)', 'Миски (78)', 'Кружки эмалированные (90)', 'Сковороды (90)', 'Чайники (90)']
+                li: a.catalog-list__item(href="#")= listItem
+
+        .cell.large-13
+          .catalog-card(data-equalizer-watch="catalog-card")
+            h4.catalog-card__title Кухонные принадлежности
+            .grid-x.medium-up-2
+              .cell
+                ul.catalog-list
+                  each listItem in ['Банки для сыпучих продуктов  (67)', 'Венчики', 'лопатки', 'половники (89)', 'Доски разделочные (67)', 'Ложки и шумовки (23)', 'Масленки (21)', 'Молотки (78)', 'Наборы кухонных приборов (90)', 'Ступки', 'Терки']
+                    li: a.catalog-list__item(href="#")= listItem
+              .cell
+                ul.catalog-list
+                  each listItem in ['Салфетницы (67)', 'Солонки (89)', 'Подложки (67)', 'Наборы для специй (23)', 'Пакеты и пленка для продуктов (21)', 'Подносы (78)', 'Скалки (90)', 'Толкушки' , 'Хлебницы']
+                    li: a.catalog-list__item(href="#")= listItem
+
+        .cell.large-13
+          .catalog-card(style="background-image: url(./i/cat-2.jpg)" data-equalizer-watch="catalog-card")
+            h4.catalog-card__title Посуда для чая и кофе
+            ul.catalog-list
+              each listItem in ['Заварочные чайники (67)', 'Бутылки для воды (89)', 'Кофеварки (67)', 'Кружки (23)', 'Сахарницы (21)', 'Турки (78)']
+                li: a.catalog-list__item(href="#")= listItem
+                
+        .cell.large-11
+          .catalog-card(style="background-image: url(./i/cat-3.jpg)" data-equalizer-watch="catalog-card")
+            h4.catalog-card__title Детская посуда
+            h5.catalog-card__subtitle Интерьер
+            ul.catalog-list
+              each listItem in ['Вазы (67)', 'Ключницы (89)']
+                li: a.catalog-list__item(href="#")= listItem
+            h5.catalog-card__subtitle Хозяйственные товары
+            ul.catalog-list
+              each listItem in ['Ведра (67)', 'Тазы (89)']
+                li: a.catalog-list__item(href="#")= listItem
+            h5.catalog-card__subtitle Пакеты подарочные

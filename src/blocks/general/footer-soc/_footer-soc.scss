@@ -9,6 +9,10 @@
     &:not(:last-child) {
       .footer-soc__link {
         margin-right: rem-calc(30);
+
+        @include breakpoint(medium down) {
+          margin-right: rem-calc(15);
+        }
       }
     }
   }

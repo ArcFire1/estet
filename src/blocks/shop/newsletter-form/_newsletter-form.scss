@@ -2,9 +2,18 @@
   display: flex;
   height: rem-calc(60);
 
+  @include breakpoint(large down) {
+    height: rem-calc(50);
+  }
+
+  @include breakpoint(medium down) {
+    height: rem-calc(40);
+  }
+
   &__input {
     margin-right: rem-calc(7);
     margin-bottom: 0;
     height: 100% !important;
+    border: none;
   }
 }

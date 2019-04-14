@@ -2,6 +2,10 @@
   position: relative;
   margin-bottom: rem-calc(10);
 
+  @include breakpoint(large down) {
+    margin-bottom: 0;
+  }
+
   &__item {
     position: relative;
     padding: rem-calc(30px 0);
@@ -12,12 +16,23 @@
     &:nth-child(2) {
       background: linear-gradient( -183deg, $warning-color 0%, $warning-color 60%, $alert-color 60%, $alert-color 60%);
     }
+
+    @include breakpoint(large down) {
+      min-height: rem-calc(275);
+    }
+    @include breakpoint(medium down) {
+      min-height: rem-calc(245);
+    }
   }
 
   .slick-dots {
     position: absolute;
     bottom: 0;
     margin: rem-calc(20 0);
+
+    @include breakpoint(large down) {
+      margin: rem-calc(0);
+    }
 
     li {
       button {
@@ -41,10 +56,20 @@
     &:active {
       background: none;
     }
+
+    @include breakpoint(large down) {
+      padding: 0;
+      height: rem-calc(40);
+      width: rem-calc(40);
+    }
   }
 
   .slick-prev {
     left: rem-calc(60);
+
+    @include breakpoint(large down) {
+      left: rem-calc(28);
+    }
 
     .slick-arrows {
       transform: rotate(180deg);
@@ -53,5 +78,9 @@
 
   .slick-next {
     right: rem-calc(60);
+
+    @include breakpoint(large down) {
+      right: rem-calc(28);
+    }
   }
 }

@@ -3,6 +3,10 @@
   margin-bottom: rem-calc(20);
   border: rem-calc(1) solid $light-gray;
 
+  @include breakpoint(medium only) {
+    display: flex;
+  }
+
   &__head {
     position: relative;
     display: block;
@@ -15,6 +19,10 @@
 
     &_yellow {
       background-color: #ffe516;
+    }
+
+    @include breakpoint(medium down) {
+      height: auto;
     }
   }
 
@@ -30,6 +38,10 @@
 
   &__content {
     padding: rem-calc(25 23);
+
+    @include breakpoint(medium down) {
+      padding: rem-calc(8 10 8 14);
+    }
   }
 
   &__title {
@@ -38,12 +50,20 @@
     font-weight: 700;
     line-height: 1.33;
     color: $black;
+
+    @include breakpoint(medium down) {
+      font-size: rem-calc(13);
+    }
   }
 
   &__text {
     font-size: rem-calc(16);
     line-height: 1.5;
     color: $black;
+
+    @include breakpoint(medium down) {
+      font-size: rem-calc(13);
+    }
   }
 
   &__link {
@@ -51,11 +71,20 @@
     font-weight: 600;
     color: $primary-color;
     text-transform: uppercase;
+
+    @include breakpoint(medium down) {
+      font-size: rem-calc(13);
+    }
   }
 
   &_large {
     min-height: rem-calc(400);
     background-color: #42d6fb;
+
+    @include breakpoint(medium down) {
+      min-height: rem-calc(250);
+      height: calc(100% - 20px);
+    }
 
     .blog-card__image {
       position: absolute;
@@ -63,6 +92,11 @@
       left: 50%;
       max-width: rem-calc(387);
       transform: translate(-50%, -50%);
+
+      @include breakpoint(medium down) {
+        max-width: 80%;
+        max-height: 80%;
+      }
     }
 
     .blog-card__content {
@@ -76,6 +110,10 @@
       font-size: rem-calc(28);
       font-weight: bold;
       color: $white;
+
+      @include breakpoint(medium down) {
+        font-size: rem-calc(18);
+      }
     }
     
     .blog-card__link {

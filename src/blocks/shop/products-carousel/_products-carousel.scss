@@ -1,11 +1,38 @@
 .products-carousel {
+  position: relative;
   margin-top: rem-calc(-45);
   margin-left: rem-calc(-20);
   margin-right: rem-calc(-20);
-  padding-top: rem-calc(45);
-  padding-left: rem-calc(20);
-  padding-right: rem-calc(20);
+  padding: rem-calc(45 20 20 20);
   overflow: hidden;
+
+  &:before,
+  &:after {
+    display: block;
+    position: absolute;
+    content: '';
+    top: rem-calc(40);
+    bottom: rem-calc(45);
+    right: rem-calc(-7);
+    width: rem-calc(32);
+    background-color: $white;
+    z-index: 500;
+
+    @include breakpoint(large down) {
+      width: rem-calc(25);
+    }
+  }
+
+  &:before {
+    left: rem-calc(-7);
+  }
+  
+  @include breakpoint(large down) {
+    margin-top: rem-calc(-20);
+    margin-left: rem-calc(0);
+    margin-right: rem-calc(0);
+    padding: rem-calc(40 0 20 0);
+  }
 
   &-wrapper {
     position: relative;
@@ -17,10 +44,16 @@
       border-radius: 50%;
       background-color: $white;
       box-shadow: rem-calc(0 4 10 0) rgba(0, 0, 0, 0.11);
-      z-index: 500;
+      z-index: 1000;
   
       &.slick-prev {
         left: rem-calc(-50);
+        
+        @include breakpoint(large down) {
+          top: 0;
+          left: auto;
+          right: rem-calc(80);
+        }
         .slick-arrows {
           transform: rotate(180deg);
         }
@@ -28,6 +61,12 @@
   
       &.slick-next {
         right: rem-calc(-50);
+
+        @include breakpoint(large down) {
+          top: 0;
+          left: auto;
+          right: rem-calc(10);
+        }
       }
     }
   }
