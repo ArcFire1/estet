@@ -42,14 +42,31 @@ html.no-js(lang='ru')
         section.promo-cards
           .grid-x.grid-padding-x
             .cell.medium-12
-              a.promo-card.promo-card_medium(href="#" style="background-image: url(./i/sales.jpg)")
+              .promo-card.promo-card_medium(href="#" style="background-image: url(./i/cupones.jpg)")
+                h4.promo-card__title Скидки
+                  br
+                  | дня
+                a.promo-card__button(href="#")
+                  include ../images/promo-button.svg
+
               .grid-x.grid-padding-x
-                .cell.medium-12
-                  a.promo-card.promo-card_small(href="#" style="background-image: url()")
-                .cell.medium-12
-                  a.promo-card.promo-card_small(href="#" style="background-image: url()")
+                .cell.small-12
+                  .promo-card.promo-card_small(href="#" style="background-image: url(./i/new-items.jpg)")
+                    h4.promo-card__title.promo-card__title_bottom Новинки
+                    a.promo-card__button(href="#")
+                      include ../images/promo-button.svg
+
+                .cell.small-12
+                  .promo-card.promo-card_small(href="#" style="background-image: url(./i/sales.jpg)")
+                    h4.promo-card__title.promo-card__title_top Распродажа
+                    a.promo-card__button(href="#")
+                      include ../images/promo-button.svg
+
             .cell.medium-12
-              a.promo-card.promo-card_large(href="#" style="background-image: url(./i/gifts.jpg)")
+              .promo-card.promo-card_large(href="#" style="background-image: url(./i/gifts.jpg)")
+                h4.promo-card__title.promo-card__title_bottom Подарки
+                a.promo-card__button(href="#")
+                  include ../images/promo-button.svg
 
         section.section.section_borderless
           h2.section__title Акции

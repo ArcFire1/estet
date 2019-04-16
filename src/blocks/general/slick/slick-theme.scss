@@ -101,7 +101,9 @@ $slick-dot-color-active: rgba(0, 0, 0, 0.2) !default;
 .slick-dots {
   margin: 2rem 0;
   list-style: none;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   padding: 0;
   width: 100%;
@@ -115,8 +117,8 @@ $slick-dot-color-active: rgba(0, 0, 0, 0.2) !default;
       border: 0;
       background: $slick-dot-color;
       display: block;
-      height: rem-calc(10);
-      width: rem-calc(10);
+      height: rem-calc(6);
+      width: rem-calc(6);
       outline: none;
       line-height: 0;
       font-size: 0;
@@ -131,8 +133,11 @@ $slick-dot-color-active: rgba(0, 0, 0, 0.2) !default;
         outline: none;
       }
     }
+
     &.slick-active button {
       background: $slick-dot-color-active;
+      height: rem-calc(11);
+      width: rem-calc(11);
     }
   }
 }

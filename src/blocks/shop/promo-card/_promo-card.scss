@@ -1,19 +1,158 @@
 .promo-card {
   display: block;
-  margin-bottom: rem-cac(23);
+  position: relative;
+  margin-bottom: rem-calc(23);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  overflow: hidden;
+
+  &:hover,
+  &:focus,
+  &:active {
+    .promo-card__button {
+      bottom: rem-calc(10);
+
+      @include breakpoint(small down) {
+        bottom: rem-calc(5);
+      }
+    }
+  }
 
   &_large {
     min-height: rem-calc(570);
+
+    @include breakpoint(large down) {
+      min-height: rem-calc(440);
+    }
+
+    @include breakpoint(medium down) {
+      min-height: rem-calc(335);
+    }
+
+    @include breakpoint(small down) {
+      min-height: rem-calc(275);
+    }
+
+    .promo-card__title {
+      font-size: rem-calc(46);
+
+      @include breakpoint(large down) {
+        font-size: rem-calc(40);
+      }
+
+      @include breakpoint(medium down) {
+        font-size: rem-calc(24);
+      }
+    }
   }
 
   &_medium {
     min-height: rem-calc(270);
+
+    @include breakpoint(large down) {
+      min-height: rem-calc(207);
+    }
+
+    @include breakpoint(medium down) {
+      min-height: rem-calc(155);
+    }
+
+    @include breakpoint(small down) {
+      min-height: rem-calc(132);
+    }
+
+    .promo-card__title {
+      font-size: rem-calc(46);
+      text-align: center;
+
+      @include breakpoint(large down) {
+        font-size: rem-calc(40);
+      }
+
+      @include breakpoint(medium down) {
+        font-size: rem-calc(24);
+      }
+    }
   }
 
   &_small {
     min-height: rem-calc(275);
+
+    @include breakpoint(large down) {
+      min-height: rem-calc(210);
+    }
+
+    @include breakpoint(medium down) {
+      min-height: rem-calc(158);
+    }
+
+    @include breakpoint(small down) {
+      min-height: rem-calc(134);
+    }
+  }
+
+  &__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: rem-calc(24);
+    font-weight: 700;
+    color: $white;
+
+    @include breakpoint(medium down) {
+      font-size: rem-calc(18);
+    }
+
+    @include breakpoint(small down) {
+      font-size: rem-calc(14);
+    }
+
+    &_bottom {
+      top: auto;
+      left: rem-calc(24);
+      bottom: rem-calc(22);
+      transform: none;
+
+      @include breakpoint(large down) {
+        bottom: rem-calc(19);
+      }
+
+      @include breakpoint(medium down) {
+        bottom: rem-calc(12);
+      }
+
+      @include breakpoint(small down) {
+        bottom: rem-calc(5);
+      }
+    }
+
+    &_top {
+      top: rem-calc(6);
+      left: rem-calc(18);
+      bottom: auto;
+      transform: none;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    right: rem-calc(15);
+    bottom: rem-calc(-70);
+    font-size: rem-calc(50);
+    transition: 0.3s ease;
+
+    @include breakpoint(large down) {
+      font-size: rem-calc(40);
+    }
+
+    @include breakpoint(medium down) {
+      font-size: rem-calc(30);
+    }
+
+    @include breakpoint(small down) {
+      font-size: rem-calc(25);
+    }
   }
 }
