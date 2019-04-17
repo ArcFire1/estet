@@ -5,6 +5,10 @@
 
   &_right {
     margin-right: rem-calc(10);
+
+    .quant__input {
+      max-width: rem-calc(100);
+    }
   }
 
   .quant__input {
