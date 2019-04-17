@@ -6,6 +6,10 @@
     padding-top: rem-calc(50);
   }
 
+  @include breakpoint(small down) {
+    padding-top: rem-calc(20);
+  }
+
   &__title {
     display: block;
     margin-bottom: rem-calc(50);
@@ -17,6 +21,11 @@
     @include breakpoint(large down) {
       margin-bottom: rem-calc(40);
       font-size: rem-calc(24);
+    }
+
+    @include breakpoint(small down) {
+      margin-bottom: rem-calc(15);
+      font-size: rem-calc(18);
     }
   }
 
@@ -31,6 +40,10 @@
     height: 100%;
     background-color: $white;
     z-index: 500;
+
+    @include breakpoint(small down) {
+      display: none;
+    }
   }
 
   &:before {
@@ -48,6 +61,15 @@
     margin-top: rem-calc(80);
     padding: rem-calc(64 0 75 0);
     background-color: $news-bg;
+
+    @include breakpoint(small down) {
+      margin-top: 0;
+      padding: rem-calc(24 0 32 0);
+
+      .section__title {
+        font-size: rem-calc(14);
+      }
+    }
 
     &:before,
     &:after {
@@ -75,6 +97,22 @@
     @include breakpoint(medium only) {
       .cell {
         &:nth-child(n+4) {
+          display: none;
+        }
+      }
+    }
+
+    @include breakpoint(small only) {
+      .cell {
+
+        &:nth-child(n+2) {
+          .product-card__wrapper {
+            &:after {
+              display: none;
+            }
+          }
+        }
+        &:nth-child(n+3) {
           display: none;
         }
       }

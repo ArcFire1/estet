@@ -15,6 +15,15 @@
     z-index: 1;
   }
 
+  @include breakpoint(small down) {
+    margin-bottom: 0;
+    text-align: center;
+
+    &:after {
+      display: none;
+    }
+  }
+
   &__date {
     display: block;
     margin-bottom: rem-calc(18);
@@ -60,6 +69,13 @@
 
     @include breakpoint(large down) {
       height: rem-calc(182);
+    }
+
+    @include breakpoint(small down) {
+      margin-left: auto;
+      margin-right: auto;
+      width: 90%;
+      height: rem-calc(142);
     }
   }
 }

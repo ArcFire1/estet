@@ -1,6 +1,6 @@
 footer.footer
   .grid-container: .grid-x.grid-padding-x(data-equalizer="columns")
-    .cell.medium-6
+    .cell.small-12.medium-6.small-order-1.medium-order-1
       .footer-column(data-equalizer-watch="columns")
         h4.footer-column__title Контакты
         p.footer-contacts
@@ -9,32 +9,42 @@ footer.footer
           | #[a.footer-contacts__tel(href="tel:+881267688855") 8 (812) 676-888-55] 
           | #[a.footer-contacts__email(href="mailto:ishop@estet.ru") ishop@estet.ru]
         
-        .footer__copy &copy; 2019 Эстет | Создано Dobrosite 
+        .footer__copy.show-for-medium &copy; 2019 Эстет | Создано Dobrosite
 
-    .cell.medium-6
+    .cell.small-12.medium-6.small-order-3.medium-order-2
       .footer-column(data-equalizer-watch="columns")
         h4.footer-column__title Покупателям
         ul.footer-list
           each i in ['О компании', 'Условия работы', 'Реквизиты', 'Прайс-листы', 'Новинки', 'Акции', 'Новости', 'Статьи']
             li: a.footer-list__item(href="#")= i
 
-    .cell.medium-6
+    .cell.small-12.medium-6.small-order-4.medium-order-3
       .footer-column(data-equalizer-watch="columns")
         h4.footer-column__title Оформление заказа
         ul.footer-list
           each i in ['Помощь', 'Как сделать заказ', 'Доставка', 'Оплата', 'Возврат', 'Отзывы', 'Вопросы и ответ', 'Карта сайта']
             li: a.footer-list__item(href="#")= i
 
-    .cell.medium-6
+    .cell.small-12.medium-6.small-order-2.medium-order-4
       .footer-column(data-equalizer-watch="columns")
         h4.footer-column__title Обратная связь
         ul.footer-list.footer-list_dotted
           each i in ['Задать вопрос', 'Написать директору']
             li: a.footer-list__item(href="#")= i
 
+        ul.footer-soc.show-for-medium
+          li.footer-soc__item: a.footer-soc__link(href="#"): i.fab.fa-facebook-f
+          li.footer-soc__item: a.footer-soc__link(href="#"): i.fab.fa-vk
+          li.footer-soc__item: a.footer-soc__link(href="#"): i.fab.fa-youtube
+          li.footer-soc__item: a.footer-soc__link(href="#"): i.fab.fa-odnoklassniki
+        p.footer-column__text.show-for-medium Политика обработки персональных данных
+
+    .cell.small-24.small-order-5.medium-order-5.footer__bottom
+      .footer-column(data-equalizer-watch="columns")
         ul.footer-soc
           li.footer-soc__item: a.footer-soc__link(href="#"): i.fab.fa-facebook-f
           li.footer-soc__item: a.footer-soc__link(href="#"): i.fab.fa-vk
           li.footer-soc__item: a.footer-soc__link(href="#"): i.fab.fa-youtube
           li.footer-soc__item: a.footer-soc__link(href="#"): i.fab.fa-odnoklassniki
-        p.footer-column__text Политика обработки персональных данных  
+        p.footer-column__text Политика обработки персональных данных
+        .footer__copy &copy; 2019 Эстет | Создано Dobrosite

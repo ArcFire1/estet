@@ -1,0 +1,35 @@
+.news-carousel {
+
+  .slick-arrow {
+    padding: rem-calc(16);
+    height: rem-calc(50);
+    width: rem-calc(50);
+    border-radius: 50%;
+    background-color: $white;
+    box-shadow: rem-calc(0 4 10 0) rgba(0, 0, 0, 0.11);
+    z-index: 1000;
+
+    @include breakpoint(small down) {
+      display: block !important;
+      height: rem-calc(30);
+      width: rem-calc(30);
+      padding: 0;
+
+      .slick-arrows {
+        height: rem-calc(15);
+      }
+    }
+
+    &.slick-prev {
+      left: 0;
+
+      .slick-arrows {
+        transform: rotate(180deg);
+      }
+    }
+
+    &.slick-next {
+      right: 0;
+    }
+  }
+}

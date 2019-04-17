@@ -32,6 +32,7 @@
 
     @include breakpoint(small down) {
       min-height: rem-calc(275);
+      margin-bottom: 0;
     }
 
     .promo-card__title {
@@ -124,6 +125,7 @@
       }
 
       @include breakpoint(small down) {
+        left: rem-calc(15);
         bottom: rem-calc(5);
       }
     }

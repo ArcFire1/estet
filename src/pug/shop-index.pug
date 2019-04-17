@@ -33,11 +33,11 @@ html.no-js(lang='ru')
       .grid-container
         section.section
           h2.section__title Новинки
-          .grid-x.medium-up-3.large-up-4.xlarge-up-5.section-goods(data-equalizer="cards")
+          .grid-x.medium-up-3.large-up-4.xlarge-up-5.section-goods
             each card in [1,2,3]
-              .cell(data-equalizer-watch="cards"): +product-card(false, false, './i/products/product-' + card +'.png')
-            .cell(data-equalizer-watch="cards"): +product-card(true, false, './i/products/product-4.png')
-            .cell(data-equalizer-watch="cards"): +product-card(false, true, './i/products/product-5.png')
+              .cell: +product-card(false, false, false, './i/products/product-' + card +'.png')
+            .cell: +product-card(true, false, false, './i/products/product-4.png')
+            .cell: +product-card(false, true, false, './i/products/product-5.png')
 
         section.promo-cards
           .grid-x.grid-padding-x
@@ -72,16 +72,16 @@ html.no-js(lang='ru')
           h2.section__title Акции
           .products-carousel-wrapper
             .products-carousel
-              +product-card(false, false, './i/products/product-1.png')
-              +product-card(false, true, './i/products/product-2.png')
-              +product-card(false, false, './i/products/product-3.png')
-              +product-card(false, false, './i/products/product-4.png')
-              +product-card(false, false, './i/products/product-5.png')
-              +product-card(false, true, './i/products/product-3.png')
+              +product-card(false, false, false, './i/products/product-1.png')
+              +product-card(false, false, false, './i/products/product-2.png')
+              +product-card(false, false, true, './i/products/product-3.png')
+              +product-card(false, false, false,'./i/products/product-4.png')
+              +product-card(false, false, false,'./i/products/product-5.png')
+              +product-card(false, true, false,'./i/products/product-3.png')
 
         section.section
           h2.section__title Новости
-          .grid-x.medium-up-3(data-equalizer="news-title" data-equalize-by-row="true")
+          .grid-x.medium-up-3.news-carousel(data-equalizer="news-title" data-equalize-by-row="true")
             .cell: +news-item('./i/news/news-1.jpg', 'Создаем имбирные пряники. Мастер-класс 28 августа')
             .cell: +news-item('./i/news/news-2.jpg', 'Кухонные принадлежности, Посуда для чая и кофе, Столовая посуда')
             .cell: +news-item('./i/news/news-3.jpg', 'Посуда для детей, новинки. Мастер-класс сервировки')
@@ -100,7 +100,7 @@ html.no-js(lang='ru')
                 .cell
                   .grid-x.blog-card(data-equalizer-watch="blog-cards")
                     .cell.small-10.large-24.blog-card__head(style="background-image: url(./i/blog/blog-2.png)")
-                      span.blog-card__label -20%
+                      span.blog-card__label -20 %
                     .cell.small-14.large-24.blog-card__content
                       h4.blog-card__title(data-equalizer-watch="card-title") Кухонные принадлежности по новым ценам
                       p.blog-card__text Анонс статьи с картинкой, набор текста для рекламного блока блока например про  статьи с 
@@ -116,7 +116,7 @@ html.no-js(lang='ru')
       section.section.section_newsletter
         .grid-container
           .grid-x.grid-padding-x.align-center
-            .cell.small-12.xlarge-10
+            .cell.medium-12.xlarge-10
               h2.section__title Подписаться на рассылку
               form.newsletter-form(action="#")
                 input.newsletter-form__input(type="email" placeholder="E-mail")

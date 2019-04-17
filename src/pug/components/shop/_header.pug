@@ -3,10 +3,10 @@ header.header
     .grid-x.grid-padding-x.align-middle
       .cell.shrink.hide-for-large
         button.header__toggler(data-toggle="header-menu"): i.fa.fa-2x.fa-bars
-      .cell.shrink
+      .cell.auto.medium-shrink
         a(href="#")
           img.header__logo(src="./i/logo-white.png" alt="Logo")
-      .cell.shrink
+      .cell.shrink.show-for-medium
         include _catalog
                         
       .cell.header-menu-wrapper.large-4.xlarge-auto
@@ -20,14 +20,16 @@ header.header
               li.header-menu__item: a.header-menu__link(href="#")= item
             
       
-      .cell.auto.xlarge-shrink
+      .cell.auto.xlarge-shrink.header__search
         .input-group.input-group_large
           input.input-group-field(type="search" placeholder="Например: кастрюля" data-short-placeholder="search")
           .input-group-button
             input.button(type="submit" value="Найти")
       
-      .cell.small-4.xlarge-3
+      .cell.small-12.medium-4.xlarge-3
         ul.user-menu
+          li.user-menu__item.hide-for-medium: a.user-menu__link.js-search-toggler(href="#")
+            include ../../../images/search.svg
           li.user-menu__item: a.user-menu__link(href="#") 
             include ../../../images/heart.svg
           li.user-menu__item: a.user-menu__link(href="#")

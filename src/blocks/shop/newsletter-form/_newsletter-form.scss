@@ -10,10 +10,26 @@
     height: rem-calc(40);
   }
 
+  @include breakpoint(small down) {
+    height: auto;
+    flex-direction: column;
+    text-align: center;
+  }
+
   &__input {
     margin-right: rem-calc(7);
     margin-bottom: 0;
     height: 100% !important;
     border: none;
+
+    @include breakpoint(small down) {
+      margin-bottom: rem-calc(15);
+    }
+  }
+
+  .button {
+    @include breakpoint(small down) {
+      display: block;
+    }
   }
 }

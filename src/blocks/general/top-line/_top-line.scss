@@ -2,6 +2,10 @@
   padding: rem-calc(10 0);
   background-color: $main-color;
 
+  @include breakpoint(small down) {
+    display: none;
+  }
+
   &__tel {
     color: $white;
     font-weight: 600;

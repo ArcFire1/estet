@@ -1,3 +1,7 @@
 .promo-cards {
   padding-top: rem-calc(75);
+
+  @include breakpoint(small down) {
+    padding-top: 0;
+  }
 }

@@ -8,8 +8,13 @@
     @include breakpoint(large down) {
       height: rem-calc(45);
     }
-    @include breakpoint(large down) {
+    @include breakpoint(medium down) {
       height: rem-calc(35);
+    }
+
+    @include breakpoint(small down) {
+      margin: rem-calc(15 0);
+      height: rem-calc(25);
     }
   }
 
@@ -17,5 +22,27 @@
     font-size: rem-calc(16);
     color: $white;
     cursor: pointer;
+
+    @include breakpoint(small down) {
+      font-size: rem-calc(12);
+    }
+  }
+
+  &__search {
+    @include breakpoint(small down) {
+      display: none;
+      position: absolute;
+      top: rem-calc(65);
+      left: 0;
+      right: 0;
+      padding-top: rem-calc(20);
+      padding-bottom: rem-calc(20);
+      background-color: $primary-color;
+      z-index: 1000;
+
+      &_active {
+        display: block;
+      }
+    }
   }
 }

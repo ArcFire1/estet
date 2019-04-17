@@ -21,6 +21,10 @@
     @include breakpoint(large down) {
       width: rem-calc(25);
     }
+
+    @include breakpoint(small down) {
+      display: none;
+    }
   }
 
   &:before {
@@ -34,6 +38,28 @@
     padding: rem-calc(40 0 20 0);
   }
 
+  @include breakpoint(small down) {
+    margin-top: rem-calc(0);
+    padding: rem-calc(0 0 20 0);
+
+    .product-card__wrapper {
+      padding-left: rem-calc(30);
+      padding-right: rem-calc(30);
+
+      &:after {
+        display: none;
+      }
+    }
+
+    .product-card__head {
+      width: 30%;
+    }
+
+    .product-card__content {
+      width: 70%;
+    }
+  }
+
   &-wrapper {
     position: relative;
 
@@ -45,6 +71,17 @@
       background-color: $white;
       box-shadow: rem-calc(0 4 10 0) rgba(0, 0, 0, 0.11);
       z-index: 1000;
+
+      @include breakpoint(small down) {
+        display: block !important;
+        height: rem-calc(30);
+        width: rem-calc(30);
+        padding: 0;
+
+        .slick-arrows {
+          height: rem-calc(15);
+        }
+      }
   
       &.slick-prev {
         left: rem-calc(-50);
@@ -53,6 +90,12 @@
           top: 0;
           left: auto;
           right: rem-calc(80);
+        }
+
+        @include breakpoint(small down) {
+          top: rem-calc(65);
+          right: auto;
+          left: 0;
         }
         .slick-arrows {
           transform: rotate(180deg);
@@ -66,6 +109,12 @@
           top: 0;
           left: auto;
           right: rem-calc(10);
+        }
+
+        @include breakpoint(small down) {
+          top: rem-calc(65);
+          right: 0;
+          left: auto;
         }
       }
     }
@@ -91,6 +140,10 @@
     position: relative;
     z-index: 1;
     margin: rem-calc(15 0);
+
+    @include breakpoint(small down) {
+      margin: 0;
+    }
 
     li {
 

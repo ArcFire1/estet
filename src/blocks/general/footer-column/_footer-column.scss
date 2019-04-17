@@ -13,5 +13,10 @@
 
   &__text {
     margin-bottom: 0;
+
+    @include breakpoint(small down) {
+      margin-bottom: rem-calc(10);
+      color: scale-color($white, $lightness: -40%)
+    }
   }
 }

@@ -15,6 +15,10 @@
 
     &:not(:last-child) {
       margin-right: rem-calc(7);
+
+      @include breakpoint(small down) {
+        margin-right: rem-calc(5);
+      }
     }
 
     &_fill {

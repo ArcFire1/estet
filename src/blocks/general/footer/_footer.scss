@@ -7,4 +7,12 @@
   &__copy {
     margin-top: auto;
   }
+
+  &__bottom {
+    text-align: center;
+
+    @include breakpoint(medium up) {
+      display: none;
+    }
+  }
 }

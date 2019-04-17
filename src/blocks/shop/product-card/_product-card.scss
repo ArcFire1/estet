@@ -21,7 +21,9 @@
       background-color: $light-gray;
     }
 
-    &:hover {
+    &:hover,
+    &:focus,
+    &:active {
       position: absolute;
       top: 0;
       left: 0;
@@ -48,11 +50,30 @@
         display: flex;
       }
     }
+
+    @include breakpoint(small down) {
+      flex-direction: row;
+      padding: rem-calc(20 10 30 10);
+
+      &:after {
+        top: auto;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: rem-calc(1);
+      }
+    }
   }
 
   &__head {
     position: relative;
     margin-bottom: rem-calc(10);
+
+    @include breakpoint(small down) {
+      width: 40%;
+      margin-right: rem-calc(20);
+    }
   }
 
   &__image {
@@ -60,6 +81,11 @@
     background-size: contain;
     background-position: center bottom;
     height: rem-calc(160);
+
+    @include breakpoint(small down) {
+      height: rem-calc(90);
+      margin-bottom: rem-calc(15);
+    }
   }
 
   &__label {
@@ -72,10 +98,15 @@
     font-weight: 700;
     font-size: rem-calc(12);
     text-transform: uppercase;
-    color: $primary-color;
+    color: $medium-yellow;
     text-align: center;
-    border: rem-calc(1) solid $primary-color;
+    border: rem-calc(1) solid $medium-yellow;
     border-radius: rem-calc(3);
+    z-index: 100;
+
+    @include breakpoint(small down) {
+      display: none;
+    }
 
     &_new {
       color: $pink;
@@ -85,6 +116,12 @@
     &_sale {
       color: $light-green;
       border-color: $light-green;
+    }
+  }
+
+  &__content {
+    @include breakpoint(small down) {
+      width: 60%;
     }
   }
 
@@ -117,11 +154,20 @@
     font-weight: 600;
     line-height: 1.25;
     color: $black;
+
+    @include breakpoint(small down) {
+      font-size: rem-calc(14);
+      line-height: 1.14;
+    }
   }
 
   &__count {
     font-size: rem-calc(12);
     color: $black;
+
+    @include breakpoint(small down) {
+      font-size: rem-calc(11);
+    }
   }
 
   &__form {
@@ -134,6 +180,11 @@
     font-weight: 700;
     font-size: rem-calc(24);
     color: $black;
+
+    @include breakpoint(small down) {
+      font-size: rem-calc(16);
+      line-height: 2;
+    }
   }
 
   .quant {

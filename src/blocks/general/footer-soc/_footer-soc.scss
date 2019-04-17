@@ -5,6 +5,10 @@
   padding: 0;
   list-style: none;
 
+  @include breakpoint(small down) {
+    margin: 0 auto;
+  }
+
   &__item {
     &:not(:last-child) {
       .footer-soc__link {

@@ -21,6 +21,17 @@
     }
   }
 
+  @include breakpoint(small down) {
+    flex-direction: column;
+    align-items: stretch;
+    padding: rem-calc(20 0);
+    text-align: center;
+
+    .header-menu__link {
+      padding: rem-calc(10 20);
+    }
+  }
+
   &-wrapper {
     @include breakpoint(medium down) {
       position: absolute;

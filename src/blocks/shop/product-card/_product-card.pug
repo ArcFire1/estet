@@ -1,9 +1,11 @@
-mixin product-card(newItem, sale, imgSrc)
+mixin product-card(newItem, sale, promo, imgSrc)
   .product-card
     if newItem
       span.product-card__label.product-card__label_new Новинка
     if sale
       span.product-card__label.product-card__label_sale Хит продаж
+    if promo
+      span.product-card__label Акция
     .product-card__wrapper
       .product-card__head
         .product-card__image(style="background-image: url("+ imgSrc +")")

@@ -51,6 +51,10 @@
   .slick-prev {
     background: none;
 
+    @include breakpoint(small down) {
+      display: block !important;
+    }
+
     &:focus,
     &:hover,
     &:active {
@@ -71,6 +75,10 @@
       left: rem-calc(28);
     }
 
+    @include breakpoint(small down) {
+      left: rem-calc(15);
+    }
+
     .slick-arrows {
       transform: rotate(180deg);
     }
@@ -81,6 +89,10 @@
 
     @include breakpoint(large down) {
       right: rem-calc(28);
+    }
+
+    @include breakpoint(small down) {
+      right: rem-calc(15);
     }
   }
 }
