@@ -1,9 +1,11 @@
 .breadcrumbs {
-  margin-top: rem-calc(16);
+  margin-top: rem-calc(48);
   margin-bottom: rem-calc(24);
 
-  a {
-    color: $secondary-color;
-    font-size: rem-calc(12);
+  a,
+  li {
+    color: $black;
+    font-size: rem-calc(14);
+    text-transform: none;
   }
 }

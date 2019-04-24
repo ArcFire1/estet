@@ -1,0 +1,218 @@
+extends regular
+
+block page
+  block breadcrumbs
+    +breadcrumbs(['Главная', 'Каталог товаров', 'Кухонные принадлежности', 'Кружки эмалированные'])
+
+  .grid-container.page-container
+    .grid-x.grid-padding-x
+      block sidebar
+        aside.cell.medium-7.large-5.sidebar
+          block category-list
+            .show-for-small-only(data-responsive-toggle="category-list" data-hide-for="medium")
+              button.button.button_expanded(data-toggle) Навигация
+
+            ul.category-list#category-list
+              each i in ['Баки', 'Бутылки для воды', 'Венчики, лопатки', 'Доски разделочные', 'Ключницы', 'Кружки', 'Лотки', 'Миски, чаши и салатники', 'Кухонные приборы', 'Салфетницы', 'Солонки', 'Тазы', 'Турки']
+                li.category-list__item: a.category-list__link(href="#")= i
+
+          block filter
+            .show-for-small-only(data-responsive-toggle="filter" data-hide-for="medium")
+              button.button.button_expanded(data-toggle) Фильтр
+
+            ul.accordion.accordion-filter#filter(data-accordion data-multi-expand="true" data-allow-all-closed="true")
+              li.accordion-item.is-active(data-accordion-item)
+                a.accordion-title(href="#") Цена
+                .accordion-content(data-tab-content)
+                  .price-range
+                    .price-range-container
+                      input.price-range-field(type="number" min=0 max="9999" oninput="validity.valid||(value='0');" id="min_price")
+                      span.price-range-minus -
+                      input.price-range-field(type="number" min=0 max="9999" oninput="validity.valid||(value='9999');" id="max_price")
+                      span.price-range-currency руб.
+                    .price-range-slider#slider-range(name="rangeInput")
+              li.accordion-item.is-active(data-accordion-item)
+                a.accordion-title(href="#") Цвет
+                .accordion-content(data-tab-content)
+                  .js-filter
+                    ul.filter-list
+                      li.filter-list__item
+                        .step.filter-item
+                          input.step__input(type="checkbox" id="blue")
+                          label.step__label(for="blue")
+                            span.filter-item__color(style="background-color:blue;")
+                            | синий
+                            span.filter-item__count 34
+                      li.filter-list__item
+                        .step.filter-item
+                          input.step__input(type="checkbox" id="yellow")
+                          label.step__label(for="yellow")
+                            span.filter-item__color(style="background-color:yellow;")
+                            | желный
+                            span.filter-item__count 268
+                      li.filter-list__item
+                        .step.filter-item
+                          input.step__input(type="checkbox" id="red")
+                          label.step__label(for="red")
+                            span.filter-item__color(style="background-color:red;")
+                            | красный
+                            span.filter-item__count 89
+                      li.filter-list__item
+                        .step.filter-item
+                          input.step__input(type="checkbox" id="black")
+                          label.step__label(for="black")
+                            span.filter-item__color(style="background-color:black;")
+                            | черный
+                            span.filter-item__count 21
+                      li.filter-list__item
+                        .step.filter-item
+                          input.step__input(type="checkbox" id="green")
+                          label.step__label(for="green")
+                            span.filter-item__color(style="background-color:green;")
+                            | зеленый
+                            span.filter-item__count 54
+                    button.filter-list-toggler(type="button" data-value="Скрыть") Посмотреть все
+
+              li.accordion-item.is-active(data-accordion-item)
+                a.accordion-title(href="#") Материал
+                .accordion-content(data-tab-content)
+                  .js-filter
+                    ul.filter-list
+                      li.filter-list__item
+                        .step.filter-item
+                          input.step__input(type="checkbox" id="farfor")
+                          label.step__label(for="farfor")
+                            | фарфор
+                            span.filter-item__count 34
+                      li.filter-list__item
+                        .step.filter-item
+                          input.step__input(type="checkbox" id="keramika")
+                          label.step__label(for="keramika")
+                            | керамика
+                            span.filter-item__count 268
+                      li.filter-list__item
+                        .step.filter-item
+                          input.step__input(type="checkbox" id="steklo")
+                          label.step__label(for="steklo")
+                            | стекло
+                            span.filter-item__count 89
+                      li.filter-list__item
+                        .step.filter-item
+                          input.step__input(type="checkbox" id="some")
+                          label.step__label(for="some")
+                            | Еще что-то
+                            span.filter-item__count 21
+                      li.filter-list__item
+                        .step.filter-item
+                          input.step__input(type="checkbox" id="another-elem")
+                          label.step__label(for="another-elem")
+                            | Какой-то элемент
+                            span.filter-item__count 54
+                    button.filter-list-toggler(type="button" data-value="Скрыть") Посмотреть все
+              li.accordion-item(data-accordion-item)
+                a.accordion-title(href="#") Бренд
+                .accordion-content(data-tab-content)
+                  p Panel 1. Lorem ipsum dolor
+              li.accordion-item(data-accordion-item)
+                a.accordion-title(href="#") Размер
+                .accordion-content(data-tab-content)
+                  p Panel 1. Lorem ipsum dolor
+              li.accordion-item(data-accordion-item)
+                a.accordion-title(href="#") Диаметр
+                .accordion-content(data-tab-content)
+                  p Panel 1. Lorem ipsum dolor
+              li.accordion-item(data-accordion-item)
+                a.accordion-title(href="#") Дополнительно
+                .accordion-content(data-tab-content)
+                  p Panel 1. Lorem ipsum dolor
+
+      block content
+        .cell.auto
+          .category-container
+            .grid-x.grid-padding-x.category
+              .cell
+                h2.category__title Кружки эмалированные
+              .cell.medium-auto.category-sort
+                span.category__filter Сортировать:
+                button.category__button(data-toggle="sort-dropdown" data-position="bottom" data-alignment="left") По популярности
+                .dropdown-pane.category__dropdown#sort-dropdown(data-dropdown data-close-on-click="true")
+                  ul.category-list.category-list_bottom
+                    li.category-list__item: a.category-list__link(href="#" title="") По популярности
+                    li.category-list__item: a.category-list__link(href="#" title="") По рейтингу
+                    li.category-list__item: a.category-list__link(href="#" title="") Сначала дорогие
+
+              .cell.auto.medium-shrink
+                .category__result
+                  span.category__count 20
+                  | из 120
+              .cell.shrink
+                .category-view
+                  a.category-view__button.category-view__button_active(href="catalog-row.html"): i.fas.fa-lg.fa-th
+                  a.category-view__button(href="catalog-line.html"): i.fas.fa-lg.fa-bars
+
+            .grid-x
+              .cell.medium-12.large-6
+                +product-card(false, false, false, './i/products/product-1.png', 'product-card_catalog')
+              .cell.medium-12.large-6
+                +product-card(false, false, false, './i/products/product-1.png', 'product-card_catalog')
+              .cell.medium-12.large-6
+                +product-card(false, false, false, './i/products/product-1.png', 'product-card_catalog')
+              .cell.medium-12.large-6
+                +product-card(false, false, false, './i/products/product-1.png', 'product-card_catalog')
+
+            .grid-x
+              .cell.medium-12.large-6
+                .ads-container: a.ads(href="" style="background-image: url(./i/ads/ads-2.jpg)")
+              .cell.medium-12.large-6
+                +product-card(false, false, false, './i/products/product-1.png', 'product-card_catalog')
+              .cell.medium-12.large-6
+                +product-card(false, false, false, './i/products/product-1.png', 'product-card_catalog')
+              .cell.medium-12.large-6
+                +product-card(false, false, false, './i/products/product-1.png', 'product-card_catalog')
+
+            .grid-x
+              .cell.medium-12.large-6
+                +product-card(false, false, false, './i/products/product-1.png', 'product-card_catalog')
+              .cell.medium-12.large-6
+                +product-card(false, false, false, './i/products/product-1.png', 'product-card_catalog')
+              .cell.large-12
+                .ads-container: a.ads.ads_large(href="" style="background-image: url(./i/ads/ads-1.jpg)")
+
+            .grid-x
+              .cell.medium-12.large-6
+                +product-card(false, false, false, './i/products/product-1.png', 'product-card_catalog')
+              .cell.medium-12.large-6
+                +product-card(false, false, false, './i/products/product-1.png', 'product-card_catalog')
+              .cell.medium-12.large-6
+                +product-card(false, false, false, './i/products/product-1.png', 'product-card_catalog')
+              .cell.medium-12.large-6
+                +product-card(false, false, false, './i/products/product-1.png', 'product-card_catalog')
+
+          +pagination('pagination_large')
+    .category-other
+      section.section
+        h2.section__title Новости
+        .grid-x.medium-up-3.news-carousel(data-equalizer="news-title" data-equalize-by-row="true")
+          .cell: +news-item('./i/news/news-1.jpg', 'Создаем имбирные пряники. Мастер-класс 28 августа')
+          .cell: +news-item('./i/news/news-2.jpg', 'Кухонные принадлежности, Посуда для чая и кофе, Столовая посуда')
+          .cell: +news-item('./i/news/news-3.jpg', 'Посуда для детей, новинки. Мастер-класс сервировки')
+        .text-center
+          a.button.button_section(href="news.html") Все новости
+
+      section.section
+        h2.section__title Статьи
+        .grid-x.medium-up-3.news-carousel(data-equalizer="news-title" data-equalize-by-row="true")
+          .cell: +article-item('./i/news/news-1.jpg', 'Создаем имбирные пряники. Мастер-класс 28 августа')
+          .cell: +article-item('./i/news/news-2.jpg', 'Кухонные принадлежности, Посуда для чая и кофе, Столовая посуда')
+          .cell: +article-item('./i/news/news-3.jpg', 'Посуда для детей, новинки. Мастер-класс сервировки')
+        .text-center
+          a.button.button_section(href="#") Все статьи
+
+  section.section.section_newsletter
+    .grid-container
+      .grid-x.grid-padding-x.align-center
+        .cell.medium-12.xlarge-10
+          h2.section__title Подписаться на рассылку
+          form.newsletter-form(action="#")
+            input.newsletter-form__input(type="email" placeholder="E-mail")
+            button.button.button_bottom(type="submit") Подписаться

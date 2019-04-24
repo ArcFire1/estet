@@ -23,7 +23,8 @@ let nameChosenPage = gulpArgs.pg || '*';
 const sassPaths = [
     './node_modules/foundation-sites/scss',
     './node_modules/motion-ui',
-    './node_modules/slick-carousel/slick/'
+    './node_modules/slick-carousel/slick/',
+    './node_modules/'
 ];
 const paths = {
     dist: {
@@ -47,7 +48,8 @@ const paths = {
             'node_modules/@fortawesome/fontawesome/index.js',
             'node_modules/@fortawesome/fontawesome-free-solid/index.js',
             'node_modules/@fortawesome/fontawesome-free-regular/index.js',
-            'node_modules/@fortawesome/fontawesome-free-brands/index.js'
+            'node_modules/@fortawesome/fontawesome-free-brands/index.js',
+            'node_modules/jquery-ui-dist/jquery-ui.min.js'
         ],
         css: ['src/scss/style.scss'],
         images: 'src/images/**/*.*',

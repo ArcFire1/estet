@@ -1,0 +1,23 @@
+.filter-list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &__item {
+    display: block;
+  }
+
+  &-toggler {
+    color: $light-blue;
+    text-decoration: underline;
+    cursor: pointer;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: scale-color($light-blue, $lightness: -30%);
+    }
+  }
+}

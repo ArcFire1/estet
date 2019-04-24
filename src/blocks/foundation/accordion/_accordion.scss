@@ -14,4 +14,65 @@
       }
     }
   }
+
+  &-filter {
+    .accordion-menu {}
+
+    .accordion-content {
+      border: none;
+      border-radius: none;
+    }
+
+    .accordion-title {
+      border: none;
+      border-radius: none;
+      font-weight: 700;
+      font-size: rem-calc(20);
+      color: $black;
+      transition: 0.3s ease all;
+
+      &:before {
+        transition: 0.3s ease all;
+      }
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: $main-color;
+        background: none;
+      }
+    }
+
+    .accordion-item {
+      &:first-child>:first-child {
+        border-radius: 0;
+      }
+
+      &:last-child {
+        & > a {
+          border: none;
+          border-radius: none;
+        }
+      }
+
+      &:last-child>.accordion-content:last-child {
+        border: none;
+      }
+
+      &.is-active {
+        .accordion-title {
+          border: none;
+          border-radius: none;
+          font-weight: 700;
+          font-size: rem-calc(20);
+          color: $black;
+
+          &:before {
+            content: '+';
+            transform: rotate(45deg);
+          }
+        }
+      }
+    }
+  }
 }

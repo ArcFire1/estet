@@ -1,6 +1,13 @@
 .product-card {
   position: relative;
 
+  &_catalog {
+    .product-card__wrapper {
+      margin-bottom: rem-calc(10);
+      padding: rem-calc(20);
+    }
+  }
+
   &__wrapper {
     position: relative;
     display: flex;
@@ -77,6 +84,7 @@
   }
 
   &__image {
+    display: block;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center bottom;

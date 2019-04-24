@@ -1,0 +1,10 @@
+extends homepage
+
+block header
+  include components/shop/_header
+block header
+  include components/shop/_header-white
+
+block page
+  block breadcrumbs
+    +breadcrumbs(['Главная', 'Путь до страницы', 'Страница'])

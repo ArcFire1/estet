@@ -193,5 +193,122 @@ $(document).foundation();
         }
       ]
     });
+
+    /** range slider */
+    if ($('#slider-range').length) {
+      $('#price-range-submit').hide();
+
+      $("#min_price,#max_price").on('change', function () {
+
+        $('#price-range-submit').show();
+
+        var min_price_range = parseInt($("#min_price").val());
+
+        var max_price_range = parseInt($("#max_price").val());
+
+        if (min_price_range > max_price_range) {
+          $('#max_price').val(min_price_range);
+        }
+
+        $("#slider-range").slider({
+          values: [min_price_range, max_price_range]
+        });
+
+      });
+
+
+      $("#min_price,#max_price").on("paste keyup", function () {
+
+        $('#price-range-submit').show();
+
+        var min_price_range = parseInt($("#min_price").val());
+
+        var max_price_range = parseInt($("#max_price").val());
+
+        if(min_price_range == max_price_range){
+
+          max_price_range = min_price_range + 100;
+
+          $("#min_price").val(min_price_range);
+          $("#max_price").val(max_price_range);
+        }
+
+        $("#slider-range").slider({
+          values: [min_price_range, max_price_range]
+        });
+
+      });
+
+
+      $(function () {
+        $("#slider-range").slider({
+          range: true,
+          orientation: "horizontal",
+          min: 0,
+          max: 9999,
+          values: [0, 9999],
+          step: 100,
+
+          slide: function (event, ui) {
+            if (ui.values[0] == ui.values[1]) {
+              return false;
+            }
+
+            $("#min_price").val(ui.values[0]);
+            $("#max_price").val(ui.values[1]);
+          }
+        });
+
+        $("#min_price").val($("#slider-range").slider("values", 0));
+        $("#max_price").val($("#slider-range").slider("values", 1));
+
+      });
+    }
+
+    // colors filter
+    function toggleList(container, elem, counter, toggler) {
+      const mainContainer = $(container);
+      const showItems = counter;
+      const togglerButton = mainContainer.find(toggler);
+      let containerElement = mainContainer.find(elem);
+      let togglerValue = togglerButton.text();
+      let elementsVisible = false;
+
+      let toggleElems = function() {
+        if (elementsVisible) {
+          for (let i = 0,j = containerElement.length; i < j; i++) {
+            $(containerElement[i]).show();
+          }
+        } else if (!elementsVisible) {
+          for (let i = showItems,j = containerElement.length; i < j; i++) {
+            $(containerElement[i]).hide();
+          }
+        }
+
+      };
+
+      toggleElems();
+
+      togglerButton.click(function (){
+        let togglerNewValue = $(this).text();
+        let togglerDataValue = $(this).data('value');
+
+        if (elementsVisible) {
+          elementsVisible = false;
+        } else {
+          elementsVisible = true;
+        }
+
+        toggleElems();
+
+        let buttonText = togglerValue === togglerNewValue ? togglerDataValue : togglerValue;
+        $(this).text(buttonText);
+      });
+    }
+
+    $('.js-filter').each(function() {
+      toggleList($(this),'.filter-list__item', 3, '.filter-list-toggler');
+    });
+
   });
 })(jQuery);

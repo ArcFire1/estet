@@ -7,22 +7,22 @@
 
   &__item {
     display: inline-block;
-    height: rem-calc(5);
-    width: rem-calc(5);
-    background-color: $medium-gray;
+    font-size: rem-calc(14);
     border: none;
     border-radius: 50%;
+    color: $light-gray;
 
     &:not(:last-child) {
-      margin-right: rem-calc(7);
+      margin-right: rem-calc(5);
 
       @include breakpoint(small down) {
-        margin-right: rem-calc(5);
+        margin-right: rem-calc(3);
+        font-size: rem-calc(12);
       }
     }
 
     &_fill {
-      background-color: $primary-color;
+      color: $medium-yellow;
     }
   }
 }

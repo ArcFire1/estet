@@ -6,6 +6,7 @@
   padding: 0;
   list-style: none;
   background-color: $primary-color;
+  color: $white;
 
   @include breakpoint (large down) {
     display: none;
@@ -43,7 +44,7 @@
 
   &__link {
     display: block;
-    color: $white;
+    color: inherit;
 
     &_tag {
       font-weight: 600;

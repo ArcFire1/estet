@@ -50,12 +50,12 @@
   }
 
   &_menu {
-    background-color: $medium-green;
+    background-color: $medium-yellow;
 
     &:hover,
     &:focus,
     &:active {
-      background-color: scale-color($medium-green, $lightness: -30%);
+      background-color: scale-color($medium-yellow, $lightness: -30%);
     }
 
     @include breakpoint(xlarge up) {
@@ -94,6 +94,29 @@
     &:hover {
       background: $primary-color;
       border-color: $primary-color;
+      color: $white;
+    }
+  }
+
+  &_section {
+    margin-top: rem-calc(40);
+    padding: rem-calc(17 30);
+    background: none;
+    border: rem-calc(2) solid $secondary-color;
+    color: $secondary-color;
+    border-radius: rem-calc(5);
+    text-transform: uppercase;
+
+    @include breakpoint(small down) {
+      margin-top: rem-calc(20);
+    }
+
+
+    &:active,
+    &:focus,
+    &:hover {
+      background: $secondary-color;
+      border-color: $secondary-color;
       color: $white;
     }
   }

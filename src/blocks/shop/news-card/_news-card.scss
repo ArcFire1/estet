@@ -1,0 +1,57 @@
+.news-card {
+  position: relative;
+  margin-bottom: rem-calc(65);
+
+  @include breakpoint(large down) {
+    margin-bottom: rem-calc(50);
+  }
+
+  &__image {
+    display: block;
+    margin-bottom: rem-calc(42);
+    width: 100%;
+    height: rem-calc(238);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @include breakpoint(large down) {
+      margin-bottom: rem-calc(25);
+      height: rem-calc(200);
+    }
+  }
+
+  &__date {
+    display: block;
+    margin-bottom: rem-calc(20);
+    font-size: rem-calc(18);
+    color: $dark-gray;
+
+    @include breakpoint(large down) {
+      margin-bottom: rem-calc(10);
+    }
+  }
+
+  &__title {
+    display: block;
+    margin-bottom: rem-calc(20);
+    font-size: rem-calc(18);
+    line-height: rem-calc(24);
+    color: $light-blue;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: scale-color($light-blue, $lightness: -30%);
+    }
+
+    @include breakpoint(large down) {
+      margin-bottom: rem-calc(10);
+    }
+  }
+
+  &__text {
+    margin-bottom: 0;
+    font-size: rem-calc(16);
+  }
+}

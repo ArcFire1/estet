@@ -8,7 +8,9 @@
     display: none;
 
     &:checked + .step__label {
-      background: url($imagesPath +"/check-square.svg")no-repeat left rem-calc(2);
+      &:after {
+        transform: scale(1);
+      }
     }
 
     &:disabled + .step__label {
@@ -18,10 +20,35 @@
   }
 
   .step__label {
-    line-height: 1.3;
+    position: relative;
     margin-right: rem-calc(0);
-    background: url($imagesPath +"/check.svg")no-repeat left rem-calc(2);
     margin-left: rem-calc(0);
-    padding-left: rem-calc(20);
+    padding-left: rem-calc(35);
+
+    &:before {
+      display: block;
+      position: absolute;
+      content: '';
+      top: rem-calc(2);
+      left: 0;
+      width: rem-calc(20);
+      height: rem-calc(20);
+      border: rem-calc(2) solid $light-gray;
+      border-radius: rem-calc(5);
+    }
+
+    &:after {
+      display: block;
+      position: absolute;
+      content: '';
+      top: rem-calc(6);
+      left: rem-calc(4);
+      width: rem-calc(12);
+      height: rem-calc(12);
+      border-radius: rem-calc(3);
+      background-color: $light-gray;
+      transform: scale(0);
+      transition: 0.3s ease all;
+    }
   }
 }

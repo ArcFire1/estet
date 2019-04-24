@@ -1,0 +1,40 @@
+.category-list {
+  display: flex;
+  flex-direction: column;
+  margin: rem-calc(0 0 50 0);
+  padding: 0;
+  list-style: none;
+
+  &_bottom {
+    margin-bottom: rem-calc(20);
+  }
+
+  &__item {
+
+  }
+
+  &__link {
+    display: block;
+    position: relative;
+    padding: rem-calc(14 5);
+    font-size: rem-calc(16);
+    color: $light-blue;
+
+    &:after {
+      display: block;
+      position: absolute;
+      content: '';
+      bottom: 0;
+      left: rem-calc(5);
+      right: rem-calc(5);
+      height: rem-calc(1);
+      background-color: $light-gray;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: scale-color($light-blue, $lightness: -30%);
+    }
+  }
+}

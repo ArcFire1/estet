@@ -1,0 +1,46 @@
+.soc-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @include breakpoint(small down) {
+    margin: rem-calc(20 0);
+  }
+
+  &_right {
+    justify-content: flex-end;
+
+    @include breakpoint(small down) {
+      justify-content: center;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: rem-calc(15);
+    }
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: rem-calc(14);
+    color: $secondary-color;
+    width: rem-calc(30);
+    height: rem-calc(30);
+    border: rem-calc(1) solid $secondary-color;
+    border-radius: 50%;
+
+    @include breakpoint(large down) {
+      font-size: rem-calc(12);
+    }
+
+    @include breakpoint(large down) {
+      font-size: rem-calc(12);
+      width: rem-calc(25);
+      height: rem-calc(25);
+    }
+  }
+}

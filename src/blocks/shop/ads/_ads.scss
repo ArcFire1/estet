@@ -1,0 +1,18 @@
+.ads {
+  display: block;
+  min-height: rem-calc(350);
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+
+  &_large {
+
+  }
+
+  &-container {
+    height: 100%;
+    padding: rem-calc(20);
+  }
+}

@@ -1,6 +1,8 @@
 .top-line {
+  position: relative;
   padding: rem-calc(10 0);
   background-color: $main-color;
+  z-index: 500;
 
   @include breakpoint(small down) {
     display: none;

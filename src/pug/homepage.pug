@@ -22,10 +22,13 @@ html.no-js(lang='ru')
     include ../blocks/shop/product-card/_product-card
     include ../blocks/shop/advert-poster/_advert-poster
     include ../blocks/shop/news-item/_news-item
-    
+    include ../blocks/shop/article-item/_article-item
+
     //- header and top-line
-    include components/shop/_top-line
-    include components/shop/_header
+    block top-line
+      include components/shop/_top-line
+    block header
+      include components/shop/_header
 
     //- main content
     block page
@@ -42,30 +45,30 @@ html.no-js(lang='ru')
         section.promo-cards
           .grid-x.grid-padding-x
             .cell.medium-12
-              .promo-card.promo-card_medium(href="#" style="background-image: url(./i/cupones.jpg)")
+              a.promo-card.promo-card_medium(href="#" style="background-image: url(./i/cupones.jpg)")
                 h4.promo-card__title Скидки
                   br
                   | дня
-                a.promo-card__button(href="#")
+                .promo-card__button
                   include ../images/promo-button.svg
 
               .grid-x.grid-padding-x
                 .cell.small-12
-                  .promo-card.promo-card_small(href="#" style="background-image: url(./i/new-items.jpg)")
+                  a.promo-card.promo-card_small(href="#" style="background-image: url(./i/new-items.jpg)")
                     h4.promo-card__title.promo-card__title_bottom Новинки
-                    a.promo-card__button(href="#")
+                    .promo-card__button
                       include ../images/promo-button.svg
 
                 .cell.small-12
-                  .promo-card.promo-card_small(href="#" style="background-image: url(./i/sales.jpg)")
+                  a.promo-card.promo-card_small(href="#" style="background-image: url(./i/sales.jpg)")
                     h4.promo-card__title.promo-card__title_top Распродажа
-                    a.promo-card__button(href="#")
+                    .promo-card__button
                       include ../images/promo-button.svg
 
             .cell.medium-12
-              .promo-card.promo-card_large(href="#" style="background-image: url(./i/gifts.jpg)")
+              a.promo-card.promo-card_large(href="#" style="background-image: url(./i/gifts.jpg)")
                 h4.promo-card__title.promo-card__title_bottom Подарки
-                a.promo-card__button(href="#")
+                .promo-card__button
                   include ../images/promo-button.svg
 
         section.section.section_borderless
@@ -95,6 +98,7 @@ html.no-js(lang='ru')
                 .blog-card__content
                   h4.blog-card__title Посуда для чая и кофе
                   a.blog-card__link(href="#") Подробнее
+
             .cell.medium-12.large-14
               .grid-x.grid-padding-x.large-up-2
                 .cell

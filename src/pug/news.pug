@@ -1,0 +1,39 @@
+extends regular
+
+//- mixins
+include ../blocks/shop/news-card/_news-card
+
+block page
+  block breadcrumbs
+    +breadcrumbs(['Главная', 'Новости'])
+
+  .grid-container
+    .grid-x.grid-padding-x.heading
+      .cell.medium-4
+      .cell.auto
+        h1.heading__title Новости
+      .cell.medium-4
+        ul.soc-list.soc-list_right
+          li.soc-list__item: a.soc-list__link(href="#"): i.fab.fa-facebook-f
+          li.soc-list__item: a.soc-list__link(href="#"): i.fab.fa-vk
+          li.soc-list__item: a.soc-list__link(href="#"): i.fab.fa-odnoklassniki
+          li.soc-list__item: a.soc-list__link(href="#"): i.fab.fa-twitter
+
+    .grid-x.grid-padding-x.medium-up-2.large-up-3
+      for value, key in {'1': 'Создаем имбирные пряники. Мастер- класс 28 августа', 2: 'Готовимся к Пасхе вместе с магазином Эстет.', '3': 'Большое поступление товаров известных брендов', '4': 'Создаем имбирные пряники. Мастер- класс 28 августа', '5': 'Готовимся к Пасхе вместе с магазином Эстет.', '6': 'Большое поступление товаров известных брендов', '7': 'Создаем имбирные пряники. Мастер- класс 28 августа', '8': 'Готовимся к Пасхе вместе с магазином Эстет.'}
+        .cell
+          +news-card('./i/news/news-'+ key +'.jpg', value)
+      .cell
+        +news-card('./i/news/news-1.jpg', 'Большое поступление товаров известных брендов')
+
+    +pagination()
+
+  block newsletter
+    section.section.section_newsletter
+      .grid-container
+        .grid-x.grid-padding-x.align-center
+          .cell.medium-12.xlarge-10
+            h2.section__title Подписаться на рассылку
+            form.newsletter-form(action="#")
+              input.newsletter-form__input(type="email" placeholder="E-mail")
+              button.button.button_bottom(type="submit") Подписаться

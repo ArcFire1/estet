@@ -1,0 +1,49 @@
+.price-range {
+
+  &-container {
+    display: flex;
+    align-items: center;
+  }
+
+  &-field{
+    margin-bottom: 0;
+    border: rem-calc(2) solid $light-gray;
+    color: black;
+    border-radius: rem-calc(5);
+    height: rem-calc(38);
+  }
+
+  &-minus {
+    display: block;
+    margin: rem-calc(0 5);
+  }
+
+  &-currency {
+    margin-left: rem-calc(5);
+  }
+
+  &-slider {
+    width: 100%;
+    margin: rem-calc(20 0 10 0);
+    height: rem-calc(4);
+    background-color: $light-gray;
+
+    &.ui-widget {
+      &.ui-widget-content {
+        border: none;
+      }
+    }
+
+    .ui-slider-handle {
+      top: rem-calc(-7);
+      border-radius: 50%;
+      border: rem-calc(1) solid $light-main;
+      background-color: $white;
+    }
+  }
+}
+
+.ui-widget-header {
+  background-color: $pink;
+}
+

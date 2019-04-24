@@ -1,0 +1,23 @@
+.filter-item {
+  font-size: rem-calc(16);
+
+  .step__label {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-size: inherit;
+  }
+
+  &__color {
+    display: inline-block;
+    margin-right: rem-calc(10);
+    height: rem-calc(18);
+    width: rem-calc(18);
+    border-radius: 50%;
+  }
+
+  &__count {
+    margin-left: auto;
+    color: $medium-gray;
+  }
+}

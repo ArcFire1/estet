@@ -1,0 +1,20 @@
+.heading {
+  margin: rem-calc(48 0 56 0);
+  align-items: flex-end;
+
+  &__title {
+    margin-bottom: 0;
+    font-weight: 700;
+    font-size: rem-calc(32);
+    text-align: center;
+    line-height: 1;
+
+    @include breakpoint(large down) {
+      font-size: rem-calc(24);
+    }
+
+    @include breakpoint(small down) {
+      font-size: rem-calc(18);
+    }
+  }
+}

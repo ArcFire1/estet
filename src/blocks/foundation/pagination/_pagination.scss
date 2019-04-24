@@ -1,7 +1,40 @@
 .pagination {
   margin-bottom: rem-calc(16);
+  color: $light-blue;
+
+  &_large {
+    margin: rem-calc(80 0);
+  }
+
+  a {
+    color: $light-blue;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: scale-color($light-blue, $lightness: -30%);
+    }
+  }
+
+  .ellipsis {
+    &:after {
+      color: $light-blue;
+    }
+  }
 
   .current {
     background: $secondary-color;
+  }
+
+  &-previous {
+    &:before {
+      display: none !important;
+    }
+  }
+
+  &-next {
+    a:after {
+      display: none !important;
+    }
   }
 }

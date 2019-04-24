@@ -1,0 +1,70 @@
+.article-item {
+  display: block;
+  position: relative;
+  margin-bottom: rem-calc(20);
+  padding: rem-calc(0 25);
+
+  &:after {
+    display: block;
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    width: rem-calc(1);
+    height: 100%;
+    background-color: $light-gray;
+    z-index: 1;
+  }
+
+  @include breakpoint(small down) {
+    margin-bottom: 0;
+    text-align: center;
+
+    &:after {
+      display: none;
+    }
+  }
+
+  &__title {
+    display: block;
+    margin-bottom: rem-calc(40);
+    font-weight: 700;
+    font-size: rem-calc(18);
+    line-height: 1.33;
+    color: $black;
+    text-decoration: none;
+
+    @include breakpoint(large down) {
+      margin-bottom: rem-calc(20);
+      font-size: rem-calc(18);
+    }
+  }
+
+  &__poster {
+    display: block;
+    width: 100%;
+    height: rem-calc(238);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: $primary-color;
+    margin-bottom: rem-calc(35);
+
+    @include breakpoint(large down) {
+      height: rem-calc(182);
+      margin-bottom: rem-calc(20);
+    }
+
+    @include breakpoint(small down) {
+      margin-left: auto;
+      margin-right: auto;
+      width: 90%;
+      height: rem-calc(142);
+    }
+  }
+
+  &__link {
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+}

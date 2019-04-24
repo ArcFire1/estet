@@ -1,7 +1,17 @@
 .news-item {
+  display: block;
   position: relative;
   margin-bottom: rem-calc(20);
   padding: rem-calc(0 25);
+
+  &:focus,
+  &:hover,
+  &:active {
+    .news-item__title {
+      color: scale-color($light-blue, $lightness: -30%);
+      text-decoration: none;
+    }
+  }
   
   &:after {
     display: block;
@@ -44,13 +54,6 @@
     line-height: 1.33;
     color: $light-blue;
     text-decoration: none;
-
-    &:focus,
-    &:hover,
-    &:active {
-      color: scale-color($light-blue, $lightness: -30%);
-      text-decoration: none;
-    }
 
     @include breakpoint(large down) {
       margin-bottom: rem-calc(20);

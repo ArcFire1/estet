@@ -1,0 +1,6 @@
+mixin article-item(imgSrc, title)
+  article.article-item(href="#")
+    .article-item__poster(style="background-image: url("+ imgSrc +")")
+    h4.article-item__title(data-equalizer-watch="news-title")= title
+    p.article-item__text Если вам хочется привнести в дом цветущей красоты, но времени на уход за цветами в горшках нет, стоит задуматься о покупке ...
+    a.article-item__link(href="#") Подробнее
