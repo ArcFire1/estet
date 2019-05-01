@@ -5,6 +5,7 @@
   margin-bottom: rem-calc(16);
   border-radius: rem-calc(4);
   font-weight: 600;
+  border-width: rem-calc(2);
   font-size: rem-calc(16);
   background: $secondary-color;
   cursor: pointer;
@@ -26,7 +27,7 @@
   &:active,
   &:focus,
   &:hover {
-    background: scale-color($secondary-color, $lightness: -15%);
+    background: $light-main;
   }
 
   &_humb {
@@ -55,7 +56,7 @@
     &:hover,
     &:focus,
     &:active {
-      background-color: scale-color($medium-yellow, $lightness: -30%);
+      background-color: $pink;
     }
 
     @include breakpoint(xlarge up) {
@@ -86,14 +87,14 @@
 
   &_hollow {
     background: none;
-    border: rem-calc(1) solid $primary-color;
-    color: $primary-color;
+    border: rem-calc(2) solid $secondary-color;
+    color: $secondary-color;
 
     &:active,
     &:focus,
     &:hover {
-      background: $primary-color;
-      border-color: $primary-color;
+      background: $secondary-color;
+      border-color: $secondary-color;
       color: $white;
     }
   }
@@ -145,5 +146,14 @@
     padding: rem-calc(8 15);
     font-size: rem-calc(14);
     font-weight: 600;
+    transition: 0.3s ease all;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $white;
+      background-color: $pink;
+      border-color: $pink;
+    }
   }
 }

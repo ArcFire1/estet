@@ -26,19 +26,22 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: rem-calc(14);
+    @include font-size('p3');
     color: $secondary-color;
     width: rem-calc(30);
     height: rem-calc(30);
     border: rem-calc(1) solid $secondary-color;
     border-radius: 50%;
 
-    @include breakpoint(large down) {
-      font-size: rem-calc(12);
+    &:hover,
+    &:focus,
+    &:active {
+      color: $white;
+      background-color: $secondary-color;
+      border-color: $secondary-color;
     }
 
     @include breakpoint(large down) {
-      font-size: rem-calc(12);
       width: rem-calc(25);
       height: rem-calc(25);
     }

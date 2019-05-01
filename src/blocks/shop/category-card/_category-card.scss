@@ -1,0 +1,35 @@
+.category-card {
+  display: block;
+  margin-bottom: rem-calc(25);
+  padding: rem-calc(20 30);
+  transition: 0.3s ease all;
+  border-radius: rem-calc(5);
+
+  &__image {
+    display: block;
+    height: rem-calc(135);
+    width: 100%;
+    margin-bottom: rem-calc(15);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &__title {
+    display: block;
+    text-align: center;
+    @include font-size('p2');
+    color: $light-main;
+    transition: 0.3s ease all;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    box-shadow: rem-calc(0 0 37 0) rgba(208, 228, 237, 0.7);
+
+    .category-card__title {
+      color: $pink;
+    }
+  }
+}

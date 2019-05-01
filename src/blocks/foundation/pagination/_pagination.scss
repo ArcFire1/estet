@@ -8,11 +8,14 @@
 
   a {
     color: $light-blue;
+    border: rem-calc(1) solid transparent;
 
     &:hover,
     &:focus,
     &:active {
-      color: scale-color($light-blue, $lightness: -30%);
+      color: $secondary-color;
+      border: rem-calc(1) solid $secondary-color;
+      background: transparent;
     }
   }
 

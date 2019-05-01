@@ -37,27 +37,25 @@
   &__date {
     display: block;
     margin-bottom: rem-calc(18);
-    font-size: rem-calc(18);
+    @include font-size('p1');
     line-height: 1.11;
     color: $dark-gray;
 
     @include breakpoint(large down) {
       margin-bottom: rem-calc(14);
-      font-size: rem-calc(16);
     }
   }
 
   &__title {
     display: block;
     margin-bottom: rem-calc(40);
-    font-size: rem-calc(18);
+    @include font-size('p1');
     line-height: 1.33;
     color: $light-blue;
     text-decoration: none;
 
     @include breakpoint(large down) {
       margin-bottom: rem-calc(20);
-      font-size: rem-calc(16);
     }
   }
 

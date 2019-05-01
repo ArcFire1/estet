@@ -1,0 +1,12 @@
+.catalog-banner {
+  display: block;
+  margin-bottom: rem-calc(50);
+
+  @include breakpoint(medium down) {
+    margin-bottom: rem-calc(25);
+  }
+
+  &__image {
+    width: 100%;
+  }
+}

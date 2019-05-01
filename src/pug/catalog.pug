@@ -1,0 +1,66 @@
+extends catalog-row
+
+block content
+  .cell.auto
+    .category-container.category-container_bottom
+      .grid-x.grid-padding-x.category_bottom
+        .cell
+          h2.category__title Кухонные принадлежности
+
+          a.catalog-banner(href=""): img.catalog-banner__image(src="./i/banner.jpg" alt="")
+
+      .grid-x.grid-padding-x.medium-up-2.large-up-4(data-equalizer="category-card")
+        .cell
+          +category-card('./i/category/category-1.png', 'Банки для сыпучих продуктов')
+        .cell
+          +category-card('./i/category/category-2.png', 'Доски разделочные')
+        .cell
+          +category-card('./i/category/category-3.png', 'Ёмкости для масла')
+        .cell
+          +category-card('./i/category/category-4.png', 'Контейнеры для свч')
+        .cell
+          +category-card('./i/category/category-5.png', 'Контейнеры для яиц')
+        .cell
+          +category-card('./i/category/category-6.png', 'Мельницы для специй')
+        .cell
+          +category-card('./i/category/category-7.png', 'Мясорубки ручные')
+        .cell
+          +category-card('./i/category/category-8.png', 'Кухонные приборы')
+        .cell
+          +category-card('./i/category/category-1.png', 'Наборы для специй')
+        .cell
+          +category-card('./i/category/category-2.png', 'Ножи')
+        .cell
+          +category-card('./i/category/category-3.png', 'Ножницы и секаторы')
+        .cell
+          +category-card('./i/category/category-4.png', 'Подносы')
+        .cell
+          +category-card('./i/category/category-5.png', 'Соковыжималки')
+        .cell
+          +category-card('./i/category/category-6.png', 'Хлебницы')
+
+      .grid-x.grid-padding-x.category_bottom
+        .cell
+          h2.category__title Популярные товары
+      .grid-x
+        .cell.medium-12.large-6
+          +product-card(false, false, false, './i/products/product-1.png', 'product-card_catalog')
+        .cell.medium-12.large-6
+          +product-card(false, false, false, './i/products/product-1.png', 'product-card_catalog')
+        .cell.medium-12.large-6
+          +product-card(false, false, false, './i/products/product-1.png', 'product-card_catalog')
+        .cell.medium-12.large-6
+          +product-card(false, false, false, './i/products/product-1.png', 'product-card_catalog')
+
+      .grid-x.grid-padding-x.category_bottom
+        .cell
+          h2.category__title Скидки
+      .grid-x
+        .cell.medium-12.large-6
+          +product-card(false, false, false, './i/products/product-1.png', 'product-card_catalog')
+        .cell.medium-12.large-6
+          +product-card(false, false, false, './i/products/product-1.png', 'product-card_catalog')
+        .cell.medium-12.large-6
+          +product-card(false, false, false, './i/products/product-1.png', 'product-card_catalog')
+        .cell.medium-12.large-6
+          +product-card(false, false, false, './i/products/product-1.png', 'product-card_catalog')

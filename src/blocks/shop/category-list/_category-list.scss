@@ -17,8 +17,9 @@
     display: block;
     position: relative;
     padding: rem-calc(14 5);
-    font-size: rem-calc(16);
-    color: $light-blue;
+    @include font-size('p2');
+    color: $light-main;
+    transition: 0.3s ease all;
 
     &:after {
       display: block;
@@ -29,12 +30,17 @@
       right: rem-calc(5);
       height: rem-calc(1);
       background-color: $light-gray;
+      transition: 0.3s ease all;
     }
 
     &:hover,
     &:focus,
     &:active {
-      color: scale-color($light-blue, $lightness: -30%);
+      color: $pink;
+
+      &:after {
+        background-color: $pink;
+      }
     }
   }
 }

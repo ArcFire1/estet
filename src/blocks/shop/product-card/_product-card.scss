@@ -104,7 +104,7 @@
     padding: rem-calc(3 10);
     min-width: rem-calc(110);
     font-weight: 700;
-    font-size: rem-calc(12);
+    @include font-size('p4');
     text-transform: uppercase;
     color: $medium-yellow;
     text-align: center;
@@ -141,12 +141,12 @@
   &__code {
     align-self: flex-end;
     margin-bottom: 0;
-    font-size: rem-calc(12);
+    @include font-size('p4');
     color: $black;
   }
 
   &__fav {
-    font-size: rem-calc(19);
+    @include font-size('p1');
     color: $light-gray;
     cursor: pointer;
 
@@ -158,13 +158,12 @@
   &__title {
     display: block;
     margin: rem-calc(11 0);
-    font-size: rem-calc(16);
+    @include font-size('p2');
     font-weight: 600;
     line-height: 1.25;
     color: $black;
 
     @include breakpoint(small down) {
-      font-size: rem-calc(14);
       line-height: 1.14;
     }
   }
@@ -186,11 +185,10 @@
   &__price {
     margin-bottom: 0;
     font-weight: 700;
-    font-size: rem-calc(24);
+    @include font-size('price');
     color: $black;
 
     @include breakpoint(small down) {
-      font-size: rem-calc(16);
       line-height: 2;
     }
   }

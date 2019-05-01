@@ -8,32 +8,19 @@
 
   &__title {
     font-weight: 700;
-    font-size: rem-calc(50);
+    @include font-size('h1');
     color: $black;
-
-    @include breakpoint(large down) {
-      font-size: rem-calc(36);
-    }
-
-    @include breakpoint(medium down) {
-      font-size: rem-calc(28);
-    }
   }
 
   &__subtitle {
     display: block;
     margin-bottom: 20px;
     font-weight: 400;
-    font-size: rem-calc(32);
+    @include font-size('h2');
     line-height: 1.25;
 
     @include breakpoint(large down) {
       margin-bottom: rem-calc(0);
-      font-size: rem-calc(24);
-    }
-
-    @include breakpoint(medium down) {
-      font-size: rem-calc(18);
     }
   }
 
@@ -42,16 +29,11 @@
     margin-bottom: rem-calc(35);
     font-weight: 700;
     font-style: italic;
-    font-size: rem-calc(32);
+    @include font-size('h2');
     color: $red;
 
     @include breakpoint(large down) {
       margin-bottom: rem-calc(20);
-      font-size: rem-calc(24);
-    }
-
-    @include breakpoint(medium down) {
-      font-size: rem-calc(18);
     }
   }
 }

@@ -29,14 +29,13 @@
     display: block;
     margin-bottom: rem-calc(40);
     font-weight: 700;
-    font-size: rem-calc(18);
+    @include font-size('p1');
     line-height: 1.33;
     color: $black;
     text-decoration: none;
 
     @include breakpoint(large down) {
       margin-bottom: rem-calc(20);
-      font-size: rem-calc(18);
     }
   }
 

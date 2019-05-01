@@ -11,7 +11,7 @@
   &__title,
   &__subtitle {
     display: block;
-    font-size: rem-calc(20);
+    @include font-size('nav');
     font-weight: 600;
     color: $black;
   }

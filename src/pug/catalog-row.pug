@@ -14,7 +14,11 @@ block page
 
             ul.category-list#category-list
               each i in ['Баки', 'Бутылки для воды', 'Венчики, лопатки', 'Доски разделочные', 'Ключницы', 'Кружки', 'Лотки', 'Миски, чаши и салатники', 'Кухонные приборы', 'Салфетницы', 'Солонки', 'Тазы', 'Турки']
-                li.category-list__item: a.category-list__link(href="#")= i
+                li.category-list__item
+                  a.category-list__link(href="#")= i
+                  ul.subcategory-list
+                    each i in ['Баки', 'Бутылки для воды', 'Венчики, лопатки', 'Доски разделочные']
+                      li.subcategory-list__item: a.subcategory-list__link(href="#")= i
 
           block filter
             .show-for-small-only(data-responsive-toggle="filter" data-hide-for="medium")

@@ -36,15 +36,7 @@
     }
 
     .promo-card__title {
-      font-size: rem-calc(46);
-
-      @include breakpoint(large down) {
-        font-size: rem-calc(40);
-      }
-
-      @include breakpoint(medium down) {
-        font-size: rem-calc(24);
-      }
+      @include font-size('h1');
     }
   }
 
@@ -64,16 +56,8 @@
     }
 
     .promo-card__title {
-      font-size: rem-calc(46);
+      @include font-size('h1');
       text-align: center;
-
-      @include breakpoint(large down) {
-        font-size: rem-calc(40);
-      }
-
-      @include breakpoint(medium down) {
-        font-size: rem-calc(24);
-      }
     }
   }
 
@@ -98,17 +82,9 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: rem-calc(24);
+    @include font-size('h3');
     font-weight: 700;
     color: $white;
-
-    @include breakpoint(medium down) {
-      font-size: rem-calc(18);
-    }
-
-    @include breakpoint(small down) {
-      font-size: rem-calc(14);
-    }
 
     &_bottom {
       top: auto;
@@ -142,19 +118,7 @@
     position: absolute;
     right: rem-calc(15);
     bottom: rem-calc(-70);
-    font-size: rem-calc(50);
+    @include font-size('h1');
     transition: 0.3s ease;
-
-    @include breakpoint(large down) {
-      font-size: rem-calc(40);
-    }
-
-    @include breakpoint(medium down) {
-      font-size: rem-calc(30);
-    }
-
-    @include breakpoint(small down) {
-      font-size: rem-calc(25);
-    }
   }
 }

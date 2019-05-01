@@ -1,0 +1,15 @@
+@mixin font-size($type) {
+  $last-num: 4;
+  $sizes-array: map-get($font-sizes, $type);
+  font-size: nth($sizes-array, $last-num);
+
+  @include breakpoint(large down) {
+    font-size: nth($sizes-array, 3);
+  }
+  @include breakpoint(medium down) {
+    font-size: nth($sizes-array, 2);
+  }
+  @include breakpoint(small down) {
+    font-size: nth($sizes-array, 1);
+  }
+}

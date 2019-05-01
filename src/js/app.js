@@ -12,30 +12,41 @@ $(document).foundation();
 
     /** menus positions */
 
-    function calcMenuPos(elem) {
+    function calcMenuPos(elem, mode) {
       const menu = $(elem);
       let width = $(window).width();
       let calcTop;
+      let modify = mode || false;
+      let breakpointLarge = $(window).width() < 1920,
+        breakpointSmall = $(window).width() < 768;
 
-      if ($(window).width() < 768) {
+      if (breakpointSmall) {
         calcTop = $('.header').outerHeight();
       } else {
         calcTop = $('.header').outerHeight() + $('.top-line').outerHeight();
       }
 
-      menu.css({'width': width, top: calcTop});
+      if (breakpointLarge) {
+        menu.css({'width': width, top: calcTop});
+      } else if (modify) {
+        menu.css({'width': width, top: calcTop});
+      } else {
+        menu.css({'width': 'auto', top: 'initial'});
+      }
     }
 
+    let breakpointLarge = $(window).width() < 1920,
+      breakpointSmall = $(window).width() < 768;
+
     $(window).on('load', function() {
-      calcMenuPos('.catalog');
+      calcMenuPos('.catalog', true);
+      calcMenuPos('.header-menu');
     });
 
     $(window).on('resize', function() {
-      calcMenuPos('.catalog');
+      calcMenuPos('.catalog', true);
+      calcMenuPos('.header-menu');
     });
-
-    const breakpointLarge = $(window).width() < 1920,
-      breakpointSmall = $(window).width() < 768;
 
     if (breakpointSmall) {
       $(window).on('load', function() {
@@ -47,15 +58,6 @@ $(document).foundation();
       });
     }
 
-    if (breakpointLarge) {
-      $(window).on('load', function() {
-        calcMenuPos('.header-menu');
-      });
-
-      $(window).on('resize', function() {
-        calcMenuPos('.header-menu');
-      });
-    }
 
     /** calc elem height */
     function calcElemHeight(elem) {
@@ -140,8 +142,8 @@ $(document).foundation();
       infinite: true,
       dots: true,
       arrows: true,
-      prevArrow: '<button type="button" class="slick-prev"><img class="slick-arrows" src="./images/product-arrow.svg" alt="arrow"></button>',
-      nextArrow: '<button type="button" class="slick-next"><img class="slick-arrows" src="./images/product-arrow.svg" alt="arrow"></button>',
+      prevArrow: '<button type="button" class="slick-prev"><svg version="1.1" class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26.1 26.1" width="26.1px" height="26.1px"><path d="M25.5,13.5H0.4C0.2,13.5,0,13.3,0,13s0.2-0.5,0.4-0.5h25.1c0.2,0,0.4,0.2,0.4,0.5S25.7,13.5,25.5,13.5z"/><path d="M12.9,26.1c-0.1,0-0.3,0-0.4-0.1c-0.2-0.2-0.2-0.5,0-0.7L24.7,13L12.5,0.9c-0.2-0.2-0.2-0.5,0-0.7s0.5-0.2,0.7,0l12.5,12.5c0.1,0.1,0.1,0.2,0.1,0.4s-0.1,0.3-0.1,0.4L13.2,25.9C13.1,26,13,26.1,12.9,26.1z"/></svg></button>',
+      nextArrow: '<button type="button" class="slick-next"><svg version="1.1" class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26.1 26.1" width="26.1px" height="26.1px"><path d="M25.5,13.5H0.4C0.2,13.5,0,13.3,0,13s0.2-0.5,0.4-0.5h25.1c0.2,0,0.4,0.2,0.4,0.5S25.7,13.5,25.5,13.5z"/><path d="M12.9,26.1c-0.1,0-0.3,0-0.4-0.1c-0.2-0.2-0.2-0.5,0-0.7L24.7,13L12.5,0.9c-0.2-0.2-0.2-0.5,0-0.7s0.5-0.2,0.7,0l12.5,12.5c0.1,0.1,0.1,0.2,0.1,0.4s-0.1,0.3-0.1,0.4L13.2,25.9C13.1,26,13,26.1,12.9,26.1z"/></svg></button>',
       appendArrows: $(".products-carousel-wrapper"),
       slidesToShow: 5,
       slidesToScroll: 1,
@@ -176,8 +178,8 @@ $(document).foundation();
       infinite: true,
       dots: false,
       arrows: true,
-      prevArrow: '<button type="button" class="slick-prev"><img class="slick-arrows" src="./images/product-arrow.svg" alt="arrow"></button>',
-      nextArrow: '<button type="button" class="slick-next"><img class="slick-arrows" src="./images/product-arrow.svg" alt="arrow"></button>',
+      prevArrow: '<button type="button" class="slick-prev"><svg version="1.1" class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26.1 26.1" width="26.1px" height="26.1px"><path d="M25.5,13.5H0.4C0.2,13.5,0,13.3,0,13s0.2-0.5,0.4-0.5h25.1c0.2,0,0.4,0.2,0.4,0.5S25.7,13.5,25.5,13.5z"/><path d="M12.9,26.1c-0.1,0-0.3,0-0.4-0.1c-0.2-0.2-0.2-0.5,0-0.7L24.7,13L12.5,0.9c-0.2-0.2-0.2-0.5,0-0.7s0.5-0.2,0.7,0l12.5,12.5c0.1,0.1,0.1,0.2,0.1,0.4s-0.1,0.3-0.1,0.4L13.2,25.9C13.1,26,13,26.1,12.9,26.1z"/></svg></button>',
+      nextArrow: '<button type="button" class="slick-next"><svg version="1.1" class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26.1 26.1" width="26.1px" height="26.1px"><path d="M25.5,13.5H0.4C0.2,13.5,0,13.3,0,13s0.2-0.5,0.4-0.5h25.1c0.2,0,0.4,0.2,0.4,0.5S25.7,13.5,25.5,13.5z"/><path d="M12.9,26.1c-0.1,0-0.3,0-0.4-0.1c-0.2-0.2-0.2-0.5,0-0.7L24.7,13L12.5,0.9c-0.2-0.2-0.2-0.5,0-0.7s0.5-0.2,0.7,0l12.5,12.5c0.1,0.1,0.1,0.2,0.1,0.4s-0.1,0.3-0.1,0.4L13.2,25.9C13.1,26,13,26.1,12.9,26.1z"/></svg></button>',
       slidesToShow: 3,
       slidesToScroll: 1,
       autoplay: false,
@@ -193,6 +195,29 @@ $(document).foundation();
         }
       ]
     });
+
+    if ($('.news-carousel').length) {
+      const container = $('.news-carousel'),
+        wrapper = container.find('.slick-track'),
+        item = container.find('.slick-slide');
+
+      const calcNewsWidth = function() {
+        let widthVar = 100 / 3;
+
+        if ($(window).width() > 768) {
+          wrapper.css('width', '100%');
+          item.css('width', widthVar + '%');
+        }
+      };
+
+      $(window).on('load', function() {
+        calcNewsWidth()
+      });
+
+      $(window).on('resize', function() {
+        calcNewsWidth()
+      });
+    }
 
     /** range slider */
     if ($('#slider-range').length) {
@@ -309,6 +334,25 @@ $(document).foundation();
     $('.js-filter').each(function() {
       toggleList($(this),'.filter-list__item', 3, '.filter-list-toggler');
     });
+
+    function ToggleMenu(elem, menu, container) {
+      const containerElements = $(container),
+        link = containerElements.find(elem),
+        toggledMenu = containerElements.find(menu);
+
+      if (toggledMenu.length) {
+        toggledMenu.slideUp();
+
+        link.click(function (e) {
+          e.preventDefault();
+          toggledMenu.slideToggle();
+        });
+      }
+    }
+
+    $('.category-list__item').each(function () {
+      new ToggleMenu('.category-list__link', '.subcategory-list', $(this));
+    })
 
   });
 })(jQuery);

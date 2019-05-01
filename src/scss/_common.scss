@@ -109,3 +109,19 @@ select {
     padding-top: rem-calc(0);
     padding-bottom: rem-calc(0);
 }
+
+p {
+  @include font-size('p2');
+}
+
+.link {
+  text-decoration: underline;
+  color: $light-blue;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $light-blue;
+    text-decoration: none;
+  }
+}

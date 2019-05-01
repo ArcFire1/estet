@@ -27,12 +27,18 @@
       border: none;
       border-radius: none;
       font-weight: 700;
-      font-size: rem-calc(20);
+      @include font-size('nav');
       color: $black;
       transition: 0.3s ease all;
 
       &:before {
         transition: 0.3s ease all;
+
+        &:hover,
+        &:focus,
+        &:active {
+          color: $secondary-color;
+        }
       }
 
       &:hover,
