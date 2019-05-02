@@ -17,6 +17,20 @@
       opacity: 0.7;
       cursor: not-allowed;
     }
+
+    &[type="radio"] {
+      & + .step__label {
+        &:before {
+          border-radius: 50%;
+        }
+
+        &:after {
+          background-image: none;
+          background-color: $pink;
+          border-radius: 50%;
+        }
+      }
+  }
   }
 
   .step__label {
@@ -34,7 +48,7 @@
       width: rem-calc(20);
       height: rem-calc(20);
       border: rem-calc(2) solid $light-gray;
-      border-radius: rem-calc(5);
+      border-radius: rem-calc(0);
     }
 
     &:after {
@@ -45,10 +59,14 @@
       left: rem-calc(4);
       width: rem-calc(12);
       height: rem-calc(12);
-      border-radius: rem-calc(3);
-      background-color: $light-gray;
+      border-radius: rem-calc(0);
+      background-image: url("../../../images/checked.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
       transform: scale(0);
       transition: 0.3s ease all;
     }
   }
 }
+

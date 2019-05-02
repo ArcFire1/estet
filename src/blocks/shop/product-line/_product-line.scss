@@ -1,0 +1,142 @@
+.product-line {
+  position: relative;
+  padding: rem-calc(15 0);
+
+  &:before,
+  &:after {
+    display: block;
+    position: absolute;
+    content: '';
+    left: 0;
+    width: 100%;
+    height: rem-calc(2);
+    background-color: $lighten-gray;
+  }
+
+  &:before {
+    top: rem-calc(-1);
+  }
+
+  &:after {
+    bottom: rem-calc(-1);
+  }
+
+
+  &__preview {
+    display: block;
+    margin-right: rem-calc(25);
+    width: rem-calc(130);
+    height: rem-calc(130);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include breakpoint(small down) {
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: rem-calc(10);
+
+    }
+  }
+
+  &__header {
+    margin-bottom: rem-calc(10);
+  }
+
+  &__label {
+    padding: rem-calc(3 15);
+    font-weight: 700;
+    @include font-size('p4');
+    text-transform: uppercase;
+    color: $warning-color;
+    text-align: center;
+    border: rem-calc(2) solid $warning-color;
+    border-radius: rem-calc(5);
+    z-index: 100;
+
+    &_new {
+      color: $pink;
+      border-color: $pink;
+    }
+
+    &_sale {
+      color: $light-green;
+      border-color: $light-green;
+    }
+  }
+
+  &__title {
+    display: block;
+    margin-bottom: rem-calc(10);
+    margin-right: rem-calc(10);
+    font-weight: 700;
+    color: $black;
+    @include font-size('p2');
+    line-height: 1.25;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $pink;
+    }
+  }
+
+  &__code,
+  &__count {
+    display: block;
+    @include font-size('p4');
+  }
+
+  &__count {
+    @include breakpoint(medium down) {
+      margin-bottom: rem-calc(15);
+    }
+  }
+
+  &__fav {
+    display: block;
+    @include font-size('p1');
+    color: $light-gray;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  &__price,
+  &__oldprice {
+    display: block;
+  }
+
+  &__price {
+    font-weight: 700;
+    @include font-size('h5');
+    line-height: 0.83;
+  }
+
+  &__oldprice {
+    margin-top: rem-calc(10);
+    @include font-size('p1');
+    text-decoration: line-through;
+  }
+
+  &__button {
+    position: relative;
+    top: rem-calc(-8);
+    margin: 0;
+
+    @include breakpoint(medium down) {
+      top: 0;
+    }
+  }
+
+  &__container {
+    @include breakpoint(medium down) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+}
+
+.js-fav_active {
+  color: $primary-color;
+}

@@ -1,2 +1,17 @@
 extends catalog-row
 
+block category-view
+  a.category-view__button(href="catalog-row.html"): i.fas.fa-lg.fa-th
+  a.category-view__button.category-view__button_active(href="catalog-line.html"): i.fas.fa-lg.fa-bars
+
+block catalog-products-type
+  +product-line('./i/products/product-line-1.png')
+  +product-line('./i/products/product-line-2.png', true, true)
+  +product-line('./i/products/product-line-3.png')
+  +product-line('./i/products/product-line-4.png')
+  +product-line('./i/products/product-line-5.png')
+  +product-line('./i/products/product-line-6.png', true, true)
+  +product-line('./i/products/product-line-2.png')
+  +product-line('./i/products/product-line-3.png')
+  +product-line('./i/products/product-line-1.png')
+  +product-line('./i/products/product-line-2.png')

@@ -114,10 +114,6 @@ block page
                             span.filter-item__count 54
                     button.filter-list-toggler(type="button" data-value="Скрыть") Посмотреть все
               li.accordion-item(data-accordion-item)
-                a.accordion-title(href="#") Бренд
-                .accordion-content(data-tab-content)
-                  p Panel 1. Lorem ipsum dolor
-              li.accordion-item(data-accordion-item)
                 a.accordion-title(href="#") Размер
                 .accordion-content(data-tab-content)
                   p Panel 1. Lorem ipsum dolor
@@ -151,46 +147,48 @@ block page
                   | из 120
               .cell.shrink
                 .category-view
-                  a.category-view__button.category-view__button_active(href="catalog-row.html"): i.fas.fa-lg.fa-th
-                  a.category-view__button(href="catalog-line.html"): i.fas.fa-lg.fa-bars
+                  block category-view
+                    a.category-view__button.category-view__button_active(href="catalog-row.html"): i.fas.fa-lg.fa-th
+                    a.category-view__button(href="catalog-line.html"): i.fas.fa-lg.fa-bars
 
-            .grid-x
-              .cell.medium-12.large-6
-                +product-card(false, false, false, './i/products/product-1.png', 'product-card_catalog')
-              .cell.medium-12.large-6
-                +product-card(false, false, false, './i/products/product-1.png', 'product-card_catalog')
-              .cell.medium-12.large-6
-                +product-card(false, false, false, './i/products/product-1.png', 'product-card_catalog')
-              .cell.medium-12.large-6
-                +product-card(false, false, false, './i/products/product-1.png', 'product-card_catalog')
+            block catalog-products-type
+              .grid-x
+                .cell.medium-12.large-6
+                  +product-card(false, false, false, './i/products/product-1.png', 'product-card_catalog')
+                .cell.medium-12.large-6
+                  +product-card(false, false, false, './i/products/product-1.png', 'product-card_catalog')
+                .cell.medium-12.large-6
+                  +product-card(false, false, false, './i/products/product-1.png', 'product-card_catalog')
+                .cell.medium-12.large-6
+                  +product-card(false, false, false, './i/products/product-1.png', 'product-card_catalog')
 
-            .grid-x
-              .cell.medium-12.large-6
-                .ads-container: a.ads(href="" style="background-image: url(./i/ads/ads-2.jpg)")
-              .cell.medium-12.large-6
-                +product-card(false, false, false, './i/products/product-1.png', 'product-card_catalog')
-              .cell.medium-12.large-6
-                +product-card(false, false, false, './i/products/product-1.png', 'product-card_catalog')
-              .cell.medium-12.large-6
-                +product-card(false, false, false, './i/products/product-1.png', 'product-card_catalog')
+              .grid-x
+                .cell.medium-12.large-6
+                  .ads-container: a.ads(href="" style="background-image: url(./i/ads/ads-2.jpg)")
+                .cell.medium-12.large-6
+                  +product-card(false, false, false, './i/products/product-1.png', 'product-card_catalog')
+                .cell.medium-12.large-6
+                  +product-card(false, false, false, './i/products/product-1.png', 'product-card_catalog')
+                .cell.medium-12.large-6
+                  +product-card(false, false, false, './i/products/product-1.png', 'product-card_catalog')
 
-            .grid-x
-              .cell.medium-12.large-6
-                +product-card(false, false, false, './i/products/product-1.png', 'product-card_catalog')
-              .cell.medium-12.large-6
-                +product-card(false, false, false, './i/products/product-1.png', 'product-card_catalog')
-              .cell.large-12
-                .ads-container: a.ads.ads_large(href="" style="background-image: url(./i/ads/ads-1.jpg)")
+              .grid-x
+                .cell.medium-12.large-6
+                  +product-card(false, false, false, './i/products/product-1.png', 'product-card_catalog')
+                .cell.medium-12.large-6
+                  +product-card(false, false, false, './i/products/product-1.png', 'product-card_catalog')
+                .cell.large-12
+                  .ads-container: a.ads.ads_large(href="" style="background-image: url(./i/ads/ads-1.jpg)")
 
-            .grid-x
-              .cell.medium-12.large-6
-                +product-card(false, false, false, './i/products/product-1.png', 'product-card_catalog')
-              .cell.medium-12.large-6
-                +product-card(false, false, false, './i/products/product-1.png', 'product-card_catalog')
-              .cell.medium-12.large-6
-                +product-card(false, false, false, './i/products/product-1.png', 'product-card_catalog')
-              .cell.medium-12.large-6
-                +product-card(false, false, false, './i/products/product-1.png', 'product-card_catalog')
+              .grid-x
+                .cell.medium-12.large-6
+                  +product-card(false, false, false, './i/products/product-1.png', 'product-card_catalog')
+                .cell.medium-12.large-6
+                  +product-card(false, false, false, './i/products/product-1.png', 'product-card_catalog')
+                .cell.medium-12.large-6
+                  +product-card(false, false, false, './i/products/product-1.png', 'product-card_catalog')
+                .cell.medium-12.large-6
+                  +product-card(false, false, false, './i/products/product-1.png', 'product-card_catalog')
 
           +pagination('pagination_large')
     .category-other

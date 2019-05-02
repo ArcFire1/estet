@@ -1,0 +1,17 @@
+.list {
+  margin-top: rem-calc(40);
+  margin-bottom: rem-calc(40);
+
+  @include breakpoint(large down) {
+    margin-top: rem-calc(20);
+    margin-bottom: rem-calc(20);
+  }
+
+  &__item {
+    margin-bottom: rem-calc(30);
+
+    @include breakpoint(large down) {
+      margin-bottom: rem-calc(16);
+    }
+  }
+}

@@ -1,0 +1,24 @@
+mixin product-line(img, advert, discount)
+  .grid-x.product-line
+    .cell.medium-shrink
+      .product-line__preview(style="background-image: url("+ img +")")
+    .cell.medium-auto
+      .grid-x.grid-padding-x.product-line__header
+        .cell.shrink
+          +mark()
+        if advert
+          .cell.auto
+            span.product-line__label Акция
+      .grid-x.grid-padding-x
+        .cell.large-auto
+          a.product-line__title(href="product.html") Казан чугун 22064 эмалированное покрытие с крышкой 5,3л 37см 2 штуки в упаковке
+          span.product-line__code Артикул: 22064
+          span.product-line__count В наличии: более 130 шт.
+        .cell.auto.large-5.product-line__container
+          span.product-line__price 3 223 &#8381;
+          if discount
+            span.product-line__oldprice 4 556 &#8381;
+        .cell.small-3.product-line__container
+          button.product-line__fav.js-fav: i.fas.fa-heart
+        .cell.shrink.product-line__container
+          button.button.button_buy.product-line__button(type="button") Купить

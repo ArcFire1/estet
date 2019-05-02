@@ -104,8 +104,8 @@ $(document).foundation();
     });
 
     /** fav button toggler */
-    $('.product-card__fav').click(function() {
-      $(this).toggleClass('product-card__fav_active');
+    $('.js-fav').click(function() {
+      $(this).toggleClass('js-fav_active');
     })
 
     /** Carousel */

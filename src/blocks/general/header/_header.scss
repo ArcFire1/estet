@@ -69,10 +69,13 @@
       &__link {
         font-weight: 600;
         transition: 0.3s ease;
+        border-bottom: rem-calc(2) solid transparent;
+
         &:hover,
         &:focus,
         &:active {
-          text-decoration: underline;
+          border-color: $black;
+          color: $black;
         }
         &_tag {
           color: $pink;

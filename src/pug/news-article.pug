@@ -1,0 +1,41 @@
+extend regular
+
+block page
+  block breadcrumbs
+    +breadcrumbs(['Главная', 'Статья'])
+
+  .grid-container.page-container
+    .grid-x.grid-padding-x
+      .cell.medium-18
+        article.news-article
+          span.news-article__date 20.08.2017
+          h1.news-article__title Виды горшков для цветов: горшки, кашпо, ящики – что и зачем нужно
+          img.news-article__image(src="./i/news-article.jpg" alt="image")
+          p.news-article__text Полноценное наступление весны за окном подталкивает к выходу из «зимней спячки» и началу облагораживания собственного жилья. Способствует оно и просыпанию домашних цветов, которые совсем скоро начнут радовать своих владельцев свежими зелеными листочками, а затем и цветением. И сейчас – отличное время, чтобы подобрать для своих зеленых жильцов новые горшочки, пересадить уже изрядно разросшихся «домоседов» или даже обновить свой домашний сад новыми видами. О том, какие горшки можно присмотреть для старых или новых цветов, мы и поговорим.
+          p.news-article__subtitle Горшок или кашпо?
+          p.news-article__text Прежде всего, стоит акцентировать внимание на разнице между горшками и кашпо. Хоть оба они и предназначены для домашних растений, разница между ними достаточно существенная.
+          p.news-article__text Настоящий цветочный горшок всегда имеет дренажные отверстия в днище.
+
+          ul.list
+            li.list__item Они не дают лишней влаге скапливаться в нижних слоях засыпанной земли. Это очень важно, так как постоянная сырость способствует началу гниения корней и появлению неприятного запаха.
+            li.list__item Отверстие позволяет производить полив некоторых растений в поддон – емкость под горшком, из которой, благодаря капиллярному эффекту, жидкость сама поднимается к корням.
+
+          p.news-article__text У кашпо такого отверстия нет, так как напрямую в него цветы не рассаживаются. Проще говоря, кашпо – это красиво украшенный, исключительно декоративный широкий горшок, в котором можно легко спрятать невзрачный основной. Также оно предотвращает разливание воды при поливе – даже вытекая через отверстие в дне горшка, она остается надежно запертой в стенках кашпо.
+
+          .news-article__toolbar
+            ul.soc-list
+              li.soc-list__item: a.soc-list__link(href="#"): i.fab.fa-facebook-f
+              li.soc-list__item: a.soc-list__link(href="#"): i.fab.fa-vk
+              li.soc-list__item: a.soc-list__link(href="#"): i.fab.fa-odnoklassniki
+              li.soc-list__item: a.soc-list__link(href="#"): i.fab.fa-twitter
+
+          p: a.news-article__back(href="") Назад к списку новостей
+
+  section.section.section_newsletter
+    .grid-container
+      .grid-x.grid-padding-x.align-center
+        .cell.medium-12.xlarge-10
+          h2.section__title Подписаться на рассылку
+          form.newsletter-form(action="#")
+            input.newsletter-form__input(type="email" placeholder="E-mail")
+            button.button.button_bottom(type="submit") Подписаться

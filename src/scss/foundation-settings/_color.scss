@@ -12,6 +12,7 @@ $foundation-palette: (
   yellow: #ffe534,
   medium-yellow: #ffc518,
   light-main: #6509b7,
+  lighten-gray: #F0F0F0,
   light-gray: #e2e2e2,
   medium-gray: #d8d8d8,
   dots: #999999,
@@ -38,6 +39,7 @@ $main-color: map-get($foundation-palette, main);
 $light-main: map-get($foundation-palette, light-main);
 $secondary-color: map-get($foundation-palette, secondary);
 $light-gray: map-get($foundation-palette, light-gray);
+$lighten-gray: map-get($foundation-palette, lighten-gray);
 $medium-gray: map-get($foundation-palette, medium-gray);
 $dark-gray: map-get($foundation-palette, dark-gray);
 $darken-gray: map-get($foundation-palette, darken-gray);
