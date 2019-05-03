@@ -1,4 +1,4 @@
-mixin product-card(newItem, sale, promo, imgSrc, customClass)
+mixin product-card(newItem, sale, promo, imgSrc, customClass, checkbox, disableClass)
   .product-card(class=customClass)
     if newItem
       span.product-card__label.product-card__label_new Новинка
@@ -9,6 +9,8 @@ mixin product-card(newItem, sale, promo, imgSrc, customClass)
     .product-card__wrapper
       .product-card__head
         a.product-card__image(href="" style="background-image: url("+ imgSrc +")")
+          if checkbox
+            +step('', false, 'product-card__checkbox', true)
         +mark()
       .product-card__content
         .product-card__container
@@ -18,6 +20,6 @@ mixin product-card(newItem, sale, promo, imgSrc, customClass)
         p.product-card__count В наличии: более 100 шт
         form.product-card__form(method="POST" action="#")
           p.product-card__price 7 340 &#8381;
-          .flex-container
+          .flex-container(class=disableClass)
             +quant('quant_right')
             button.button.button_buy.button_bottom(type="submit") Купить

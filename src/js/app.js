@@ -174,6 +174,42 @@ $(document).foundation();
       ]
     });
 
+    $(".js-carousel-viewed").slick({
+      infinite: true,
+      dots: true,
+      arrows: true,
+      prevArrow: '<button type="button" class="slick-prev"><svg version="1.1" class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26.1 26.1" width="26.1px" height="26.1px"><path d="M25.5,13.5H0.4C0.2,13.5,0,13.3,0,13s0.2-0.5,0.4-0.5h25.1c0.2,0,0.4,0.2,0.4,0.5S25.7,13.5,25.5,13.5z"/><path d="M12.9,26.1c-0.1,0-0.3,0-0.4-0.1c-0.2-0.2-0.2-0.5,0-0.7L24.7,13L12.5,0.9c-0.2-0.2-0.2-0.5,0-0.7s0.5-0.2,0.7,0l12.5,12.5c0.1,0.1,0.1,0.2,0.1,0.4s-0.1,0.3-0.1,0.4L13.2,25.9C13.1,26,13,26.1,12.9,26.1z"/></svg></button>',
+      nextArrow: '<button type="button" class="slick-next"><svg version="1.1" class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26.1 26.1" width="26.1px" height="26.1px"><path d="M25.5,13.5H0.4C0.2,13.5,0,13.3,0,13s0.2-0.5,0.4-0.5h25.1c0.2,0,0.4,0.2,0.4,0.5S25.7,13.5,25.5,13.5z"/><path d="M12.9,26.1c-0.1,0-0.3,0-0.4-0.1c-0.2-0.2-0.2-0.5,0-0.7L24.7,13L12.5,0.9c-0.2-0.2-0.2-0.5,0-0.7s0.5-0.2,0.7,0l12.5,12.5c0.1,0.1,0.1,0.2,0.1,0.4s-0.1,0.3-0.1,0.4L13.2,25.9C13.1,26,13,26.1,12.9,26.1z"/></svg></button>',
+      appendArrows: $(".js-carousel-viewed-wrapper"),
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      autoplay: false,
+      autoplaySpeed: 5000,
+      autoplayHoverPause: true,
+      responsive: [
+        {
+          breakpoint: 1920,
+          settings: {
+            slidesToShow: 4,
+          }
+        },
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            arrows: true,
+            dots: true,
+            slidesToShow: 1,
+          }
+        }
+      ]
+    });
+
     $(".news-carousel").slick({
       infinite: true,
       dots: false,
@@ -191,6 +227,40 @@ $(document).foundation();
           settings: {
             arrows: true,
             slidesToShow: 1,
+          }
+        }
+      ]
+    });
+
+    /** pdoduct carousel */
+    $('.product-image').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      fade: true,
+      asNavFor: '.product-preview'
+    });
+    $('.product-preview').slick({
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      asNavFor: '.product-image',
+      dots: false,
+      arrows: true,
+      prevArrow: '<button class="slick-prev slick-arrow" aria-label="Previous" type="button" style=""><i class="fas fa-angle-left"></i></button>',
+      nextArrow: '<button class="slick-next slick-arrow" aria-label="Next" type="button" style=""><i class="fas fa-angle-right"></i></button>',
+      focusOnSelect: true,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 4,
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            arrows: true,
+            slidesToShow: 2,
           }
         }
       ]

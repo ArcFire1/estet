@@ -55,6 +55,16 @@
     }
   }
 
+  &_bottom {
+    margin-bottom: rem-calc(80);
+  }
+
+  &_product {
+    .section__title {
+      color: $black;
+    }
+  }
+
   &_newsletter {
     margin-top: rem-calc(80);
     padding: rem-calc(64 0 75 0);

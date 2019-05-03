@@ -1,0 +1,23 @@
+.product-specs {
+  max-width: rem-calc(900);
+
+  &__body {
+    border: none;
+  }
+
+  &__row {
+    &:nth-child(even) {
+      background-color: $white;
+    }
+  }
+
+  &__col {
+    @include font-size('p2');
+
+    &_heading {
+      padding-left: 0;
+      font-weight: 700;
+      @include font-size('p3');
+    }
+  }
+}

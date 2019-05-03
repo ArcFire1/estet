@@ -81,6 +81,46 @@
     margin-left: 0;
   }
 
+  &_order,
+  &_fav,
+  &_oneclick {
+    display: block;
+    width: 100%;
+    padding-left: rem-calc(8);
+    padding-right: rem-calc(8);
+    margin-right: 0;
+    margin-left: 0;
+    text-transform: uppercase;
+  }
+
+  &_fav {
+    border-color: $light-blue;
+    background-color: transparent;
+    color: $light-blue;
+
+    &:hover,
+    &:focus,
+    &:active {
+      border-color: $light-blue;
+      background-color: $light-blue;
+      color: $white;
+    }
+  }
+
+  &_oneclick {
+    border-color: $pink;
+    background-color: transparent;
+    color: $pink;
+
+    &:hover,
+    &:focus,
+    &:active {
+      border-color: $pink;
+      background-color: $pink;
+      color: $white;
+    }
+  }
+
   &_bottom {
     margin-bottom: 0;
   }

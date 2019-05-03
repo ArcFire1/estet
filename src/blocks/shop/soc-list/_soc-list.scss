@@ -8,6 +8,10 @@
     margin: rem-calc(20 0);
   }
 
+  &_top {
+    margin-top: rem-calc(30);
+  }
+
   &_right {
     justify-content: flex-end;
 

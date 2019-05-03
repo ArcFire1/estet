@@ -99,6 +99,10 @@
 
   &-other {
     border-top: rem-calc(2) solid $light-gray;
+
+    @include breakpoint(small down) {
+      border-color: transparent;
+    }
   }
 
   &-sort {

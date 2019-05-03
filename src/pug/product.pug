@@ -1,0 +1,179 @@
+extends regular
+
+block page
+  block breadcrumbs
+    +breadcrumbs(['Главная', 'Каталог товаров', 'Посуда для приготовления', 'Блинницы, сковородки и сотейники'])
+
+  .grid-container.page-container
+    .grid-x.grid-padding-x.product-header
+      .cell.medium-14.large-12
+        .product-image
+          .product-image__item(style="background-image: url(./i/products/product-slider-1.png)")
+          .product-image__item(style="background-image: url(./i/products/product-slider-2.png)")
+          .product-image__item(style="background-image: url(./i/products/product-slider-3.png)")
+          .product-image__item(style="background-image: url(./i/products/product-slider-4.png)")
+          .product-image__item(style="background-image: url(./i/products/product-slider-5.png)")
+          .product-image__item(style="background-image: url(./i/products/product-slider-1.png)")
+        .product-preview
+          .product-preview__item(style="background-image: url(./i/products/product-slider-1.png)")
+          .product-preview__item(style="background-image: url(./i/products/product-slider-2.png)")
+          .product-preview__item(style="background-image: url(./i/products/product-slider-3.png)")
+          .product-preview__item(style="background-image: url(./i/products/product-slider-4.png)")
+          .product-preview__item(style="background-image: url(./i/products/product-slider-5.png)")
+          .product-preview__item(style="background-image: url(./i/products/product-slider-1.png)")
+      .cell.medium-10.large-12
+        .product-sidebar
+          .grid-x
+            .cell.auto
+              span.product-sidebar__code Артикул: ЭT-70434
+            .cell.shrink
+              a.product-sidebar__print(href="")
+                include ../images/printer.svg
+                | Распечатать
+          .product-labels
+            span.product-label Акция
+          h1.product-title Сковорода ЭT-70434 28 см 10 штук в упаковке
+          .product-mark
+            +mark()
+
+          .product-oldprice
+            span.product-oldprice__cost 1 320 &#8381;
+            span.product-oldprice__discount Скидка 25%
+
+          span.product-price 903 &#8381;
+
+          span.product-count В наличии: более 100 шт.
+
+          form.product-form(method="post" action="#")
+            .grid-x.grid-padding-x
+              .cell.large-6
+                +quant('product-quant')
+
+            .grid-x.grid-padding-x
+              .cell.large-6
+                button.button.button_order(type="button") Купить
+              .cell.large-10
+                button.button.button_oneclick(type="button") Купить в один клик
+              .cell.large-auto
+                button.button.button_fav(type="button") В избранное
+                  i.far.fa-heart
+
+          .grid-x.grid-padding-x
+            .cell.shrink
+              p.product-subcat Похожие товары
+            .cell.shrink
+              p.product-subcat Оплата и доставка
+
+          a.link(href="") Скачать сертификат
+
+          ul.soc-list.soc-list_top
+            li.soc-list__item: a.soc-list__link(href="#"): i.fab.fa-facebook-f
+            li.soc-list__item: a.soc-list__link(href="#"): i.fab.fa-vk
+            li.soc-list__item: a.soc-list__link(href="#"): i.fab.fa-odnoklassniki
+            li.soc-list__item: a.soc-list__link(href="#"): i.fab.fa-twitter
+
+    .product-info
+      h2.product-heading Характеристики
+      table.product-specs
+        tbody.product-specs__body
+          tr.product-specs__row
+            td.product-specs__col.product-specs__col_heading Материал:
+            td.product-specs__col Литой алюминий
+          tr.product-specs__row
+            td.product-specs__col.product-specs__col_heading Бренд:
+            td.product-specs__col Эстет
+          tr.product-specs__row
+            td.product-specs__col.product-specs__col_heading Страна производства:
+            td.product-specs__col Россия
+          tr.product-specs__row
+            td.product-specs__col.product-specs__col_heading Материал ручек:
+            td.product-specs__col Бакелит
+          tr.product-specs__row
+            td.product-specs__col.product-specs__col_heading Высота:
+            td.product-specs__col 6,9 см
+          tr.product-specs__row
+            td.product-specs__col.product-specs__col_heading Диаметр:
+            td.product-specs__col 28 см
+          tr.product-specs__row
+            td.product-specs__col.product-specs__col_heading Совместимость:
+            td.product-specs__col Универсальная кроме индукционных плит
+          tr.product-specs__row
+            td.product-specs__col.product-specs__col_heading Толщина дна:
+            td.product-specs__col 7 мм
+          tr.product-specs__row
+            td.product-specs__col.product-specs__col_heading Фасовка:
+            td.product-specs__col 10
+          tr.product-specs__row
+            td.product-specs__col.product-specs__col_heading Вес:
+            td.product-specs__col 1.539
+
+      h2.product-heading Описание товара
+      p 1. Толстостенная литая посуда. 2. Толщина дна 7 мм, толщина стенок 4,5 мм. 3. Посуда изготовлена методом ручного литья в кокиль, что позволяет усилить прочность посуды и сделать её "тяжёлой". 4. Усиленное пятислойное антипригарное покрытие. 5. Современный дизайн покрытия мрамор. 6. Подходит для всех типов плит, кроме Индукции. 7. Бакелитовая ручка , не нагревается и не скользит в процессе использования. 8. Производство Россия.
+
+    section.section.section_product
+      h2.section__title С этим товаром покупают
+      .grid-x.product-promo
+        .cell.medium-auto.large-5
+          +product-card(false, false, false, './i/products/product-1.png', 'product-card_noborder', true, 'product-card__form_disabled')
+        .cell.medium-1.large-1
+          p.product-promo__icon: i.fas.fa-plus
+        .cell.medium-auto.large-5
+          +product-card(false, false, false, './i/products/product-2.png', 'product-card_noborder', true, 'product-card__form_disabled')
+        .cell.medium-1.large-1
+          p.product-promo__icon: i.fas.fa-plus
+        .cell.medium-auto.large-5
+          +product-card(false, false, false, './i/products/product-2.png', 'product-card_noborder', true, 'product-card__form_disabled')
+        .cell.medium-3.large-2.show-for-large
+          p.product-promo__icon: i.fas.fa-equals
+        .cell.large-shrink.text-center
+          p.product-promo__price 1 320 &#8381;
+          a.button.button_buy(href="") Купить
+
+
+
+    section.section.section_product
+      h2.section__title Похожие товары
+      .products-carousel-wrapper
+        .products-carousel
+          +product-card(false, false, false, './i/products/product-1.png')
+          +product-card(false, false, false, './i/products/product-2.png')
+          +product-card(false, false, true, './i/products/product-3.png')
+          +product-card(false, false, false,'./i/products/product-4.png')
+          +product-card(false, false, false,'./i/products/product-5.png')
+          +product-card(false, true, false,'./i/products/product-3.png')
+
+    section.section.section_product.section_bottom
+      h2.section__title Вы уже смотрели
+      .grid-x.xlarge-up-5.large-up-4.medium-up-3
+        .cell
+          +product-card(false, false, false, './i/products/product-1.png')
+        .cell
+          +product-card(false, false, false, './i/products/product-2.png')
+
+    .category-other
+      section.section.section_product
+        h2.section__title Новости
+        .grid-x.medium-up-3.news-carousel(data-equalizer="news-title" data-equalize-by-row="true")
+          .cell: +news-item('./i/news/news-1.jpg', 'Создаем имбирные пряники. Мастер-класс 28 августа')
+          .cell: +news-item('./i/news/news-2.jpg', 'Кухонные принадлежности, Посуда для чая и кофе, Столовая посуда')
+          .cell: +news-item('./i/news/news-3.jpg', 'Посуда для детей, новинки. Мастер-класс сервировки')
+        .text-center
+          a.button.button_section(href="news.html") Все новости
+
+      section.section.section_product
+        h2.section__title Статьи
+        .grid-x.medium-up-3.news-carousel(data-equalizer="news-title" data-equalize-by-row="true")
+          .cell: +article-item('./i/news/news-1.jpg', 'Создаем имбирные пряники. Мастер-класс 28 августа')
+          .cell: +article-item('./i/news/news-2.jpg', 'Кухонные принадлежности, Посуда для чая и кофе, Столовая посуда')
+          .cell: +article-item('./i/news/news-3.jpg', 'Посуда для детей, новинки. Мастер-класс сервировки')
+        .text-center
+          a.button.button_section(href="#") Все статьи
+
+  section.section.section_newsletter
+    .grid-container
+      .grid-x.grid-padding-x.align-center
+        .cell.medium-12.xlarge-10
+          h2.section__title Подписаться на рассылку
+          form.newsletter-form(action="#")
+            input.newsletter-form__input(type="email" placeholder="E-mail")
+            button.button.button_bottom(type="submit") Подписаться

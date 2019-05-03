@@ -8,6 +8,14 @@
     }
   }
 
+  &_noborder {
+    .product-card__wrapper {
+      &:after {
+        display: none;
+      }
+    }
+  }
+
   &__wrapper {
     position: relative;
     display: flex;
@@ -73,6 +81,12 @@
     }
   }
 
+  &__checkbox {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
   &__head {
     position: relative;
     margin-bottom: rem-calc(10);
@@ -85,6 +99,7 @@
 
   &__image {
     display: block;
+    position: relative;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center bottom;
@@ -180,6 +195,10 @@
   &__form {
     display: flex;
     justify-content: space-between;
+
+    &_disabled {
+      display: none;
+    }
   }
 
   &__price {
