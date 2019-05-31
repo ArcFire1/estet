@@ -39,12 +39,10 @@ $(document).foundation();
       breakpointSmall = $(window).width() < 768;
 
     $(window).on('load', function() {
-      calcMenuPos('.catalog', true);
       calcMenuPos('.header-menu');
     });
 
     $(window).on('resize', function() {
-      calcMenuPos('.catalog', true);
       calcMenuPos('.header-menu');
     });
 

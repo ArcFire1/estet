@@ -1,36 +1,104 @@
 .catalog {
-  position: absolute;
-  padding: rem-calc(37 0);
-  left: 0;
-  background-color: $darken-gray;
-  width: 100%;
+  position: relative;
+  margin: rem-calc(20 0 0 0);
+  padding: rem-calc(0);
+  background-color: $white;
+  list-style: none;
+  border: none;
+  border-radius: 0;
   z-index: 1000;
+  box-shadow: rem-calc(0 0 10) rgba($color: #000000, $alpha: 0.2);
 
-  &-inner {
-    position: relative;
+  &:before {
+    display: block;
+    position: absolute;
+    content: '';
+    top: rem-calc(-10);
+    left: rem-calc(60);
+    background: $white;
+    padding: rem-calc(3);
+    transform: rotate(45deg);
+    height: rem-calc(20);
+    width: rem-calc(20);
   }
 
-  &-close {
-    position: absolute;
-    left: 100%;
-    @include font-size('h2');
-    opacity: 0.6;
-    transition: 0.3s ease;
-    z-index: 1000;
-    cursor: pointer;
+  &__item {
+    &:last-child {
+      .catalog__link {
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__link {
+    display: flex;
+    position: relative;
+    padding: rem-calc(15 15 15 60);
+    background: #fff;
+
+    &:before {
+      display: block;
+      position: absolute;
+      content: '';
+      top: rem-calc(22);
+      right: rem-calc(15);
+      transform: rotate(45deg);
+      border-width: rem-calc(2);
+      border-style: solid;
+      border-color: $medium-gray $medium-gray transparent transparent;
+      padding: rem-calc(3);
+    }
+
+    &:after {
+      display: block;
+      position: absolute;
+      content: '';
+      bottom: 0;
+      left: rem-calc(15);
+      right: rem-calc(15);
+      height: rem-calc(1);
+      background-color: $medium-gray;
+    }
 
     &:hover,
     &:focus,
     &:active {
-      opacity: 1;
-    }
+      background-color: $primary-color;
 
-    @include breakpoint(large down) {
-      display: none;
+      &:before {
+        border-color: $white $white transparent transparent;
+      }
+
+      &:after {
+        background-color: $primary-color;
+      }
+
+      .catalog__title {
+        color: $white;
+      }
     }
   }
 
-  &_hidden {
-    display: none;
+  &__icon {
+    position: absolute;
+    left: rem-calc(15);
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: rem-calc(14);
+    color: $black;
+  }
+
+  &-wrapper {
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    border: 0;
+    background-color: transparent;
   }
 }

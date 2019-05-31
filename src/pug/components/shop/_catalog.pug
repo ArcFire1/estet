@@ -1,6 +1,37 @@
-.catalog-wrapper
-  button.button.button_humb(data-toggle="main-catalog") Каталог товаров #[i.fa.fa-2x.fa-bars]
-  .catalog.catalog_hidden#main-catalog(data-toggler=".catalog_hidden")
+button.button.button_humb(type="button" data-toggle="main-catalog") Каталог товаров #[i.fa.fa-2x.fa-bars]
+.dropdown-pane.catalog-wrapper#main-catalog(data-position="bottom" data-alignment="left" data-dropdown)
+  ul.catalog
+    li.catalog__item
+      a.catalog__link.catalog__link_submenu(href="#")
+        img.catalog__icon(src="images/shop/icons/icon-1.png" alt='icon') 
+        span.catalog__title Посуда для приготовления
+    li.catalog__item
+      a.catalog__link.catalog__link_submenu(href="#")
+        img.catalog__icon(src="images/shop/icons/icon-2.png" alt='icon') 
+        span.catalog__title Посуда для чая и кофе
+    li.catalog__item
+      a.catalog__link.catalog__link_submenu(href="#")
+        img.catalog__icon(src="images/shop/icons/icon-3.png" alt='icon') 
+        span.catalog__title Кухонные принадлежности
+    li.catalog__item
+      a.catalog__link.catalog__link_submenu(href="#")
+        img.catalog__icon(src="images/shop/icons/icon-4.png" alt='icon') 
+        span.catalog__title Детская посуда
+    li.catalog__item
+      a.catalog__link.catalog__link_submenu(href="#")
+        img.catalog__icon(src="images/shop/icons/icon-5.png" alt='icon') 
+        span.catalog__title Интерьер
+    li.catalog__item
+      a.catalog__link.catalog__link_submenu(href="#")
+        img.catalog__icon(src="images/shop/icons/icon-6.png" alt='icon') 
+        span.catalog__title Хозяйственные товары
+    li.catalog__item
+      a.catalog__link.catalog__link_submenu(href="#")
+        img.catalog__icon(src="images/shop/icons/icon-7.png" alt='icon') 
+        span.catalog__title Пакеты подарочные
+
+
+  //.catalog.catalog_hidden#main-catalog(data-toggler=".catalog_hidden")
     .grid-container.catalog-inner
       button.catalog-close
         include ../../../images/close.svg
