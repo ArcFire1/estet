@@ -1,0 +1,60 @@
+.catalog-submenu {
+  display: none;
+  position: absolute;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: rem-calc(15);
+  top: 0;
+  left: 100%;
+  height: 100%;
+  width: 100%;
+  background-color: $white;
+  box-shadow: rem-calc(0 0 10) rgba($color: #000000, $alpha: 0.2);
+  list-style: none;
+  z-index: 9999;
+
+  &_visible {
+    display: flex;
+  }
+
+  &_medium {
+    width: rem-calc(500);
+
+    @include breakpoint(large down) {
+      height: auto;
+      width: 100%;
+    }
+  }
+
+  &_large {
+    width: rem-calc(870);
+
+    @include breakpoint(large down) {
+      height: auto;
+      width: 100%;
+    }
+  }
+
+  &__item {
+    margin: rem-calc(0 15);
+    padding-right: rem-calc(5);
+    border-bottom: rem-calc(1) solid $medium-gray;
+  }
+
+  &__link {
+    display: block;
+    padding: rem-calc(10 0);
+    font-family: $font-open;
+    font-weight: 600;
+    font-size: rem-calc(14);
+    color: $light-black;
+    transition: 0.3s ease all;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $pink;
+    }
+  }
+}

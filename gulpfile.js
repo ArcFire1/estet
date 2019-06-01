@@ -38,7 +38,7 @@ const paths = {
     },
     src: {
         html: 'src/pug/' + nameChosenPage + '.pug',
-        js: 'src/js/*.js',
+        js: 'src/js/**/*.js',
         json: 'src/json/*.json',
         jsLib: [
             'node_modules/jquery/dist/jquery.min.js',

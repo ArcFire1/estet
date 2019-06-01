@@ -1,77 +1,52 @@
 button.button.button_humb(type="button" data-toggle="main-catalog") Каталог товаров #[i.fa.fa-2x.fa-bars]
-.dropdown-pane.catalog-wrapper#main-catalog(data-position="bottom" data-alignment="left" data-dropdown)
+.dropdown-pane.catalog-wrapper.JS-Megamenu#main-catalog(data-position="bottom" data-alignment="left" data-dropdown data-megamenu="{'cssSubmenuClass': 'catalog__link_submenu', 'cssLinkActive': 'catalog__link_active', 'cssSubmenuActive': 'catalog-submenu_visible'}")
   ul.catalog
-    li.catalog__item
-      a.catalog__link.catalog__link_submenu(href="#")
+    li.catalog__item.JS-Megamenu-Item
+      a.catalog__link.JS-Megamenu-Link(href="#")
         img.catalog__icon(src="images/shop/icons/icon-1.png" alt='icon') 
         span.catalog__title Посуда для приготовления
-    li.catalog__item
-      a.catalog__link.catalog__link_submenu(href="#")
+      ul.catalog-submenu.catalog-submenu_medium.JS-Megamenu-Submenu
+        each listItem in ['Баки', 'Наборы посуды', 'Кастрюли', 'Ковши', 'Лотки', 'Миски', 'Кружки эмалированные', 'Сковороды', 'Чайники']
+          li.catalog-submenu__item: a.catalog-submenu__link(href="#")= listItem 
+
+    li.catalog__item.JS-Megamenu-Item
+      a.catalog__link.JS-Megamenu-Link(href="#")
         img.catalog__icon(src="images/shop/icons/icon-2.png" alt='icon') 
         span.catalog__title Посуда для чая и кофе
-    li.catalog__item
-      a.catalog__link.catalog__link_submenu(href="#")
+      ul.catalog-submenu.JS-Megamenu-Submenu
+        each listItem in ['Заварочные чайники', 'Бутылки для воды', 'Кофеварки', 'Кружки', 'Сахарницы', 'Турки']
+          li.catalog-submenu__item: a.catalog-submenu__link(href="#")= listItem  
+
+    li.catalog__item.JS-Megamenu-Item
+      a.catalog__link.JS-Megamenu-Link(href="#")
         img.catalog__icon(src="images/shop/icons/icon-3.png" alt='icon') 
         span.catalog__title Кухонные принадлежности
-    li.catalog__item
-      a.catalog__link.catalog__link_submenu(href="#")
+      ul.catalog-submenu.catalog-submenu_large.JS-Megamenu-Submenu
+        each listItem in ['Банки для сыпучих продуктов', 'Венчики, лопатки, половники', 'Доски разделочные', 'Ложки и шумовки', 'Масленки', 'Молотки', 'Наборы кухонных приборов', 'Салфетницы', 'Солонки', 'Подложки', 'Наборы для специй', 'Пакеты и пленка для продуктов', 'Подносы', 'Скалки', 'Ступки', 'Терки', 'Толкушки' , 'Хлебницы', 'Шприцы кондитерские']
+          li.catalog-submenu__item: a.catalog-submenu__link(href="#")= listItem
+
+    li.catalog__item.JS-Megamenu-Item
+      a.catalog__link.JS-Megamenu-Link(href="#")
         img.catalog__icon(src="images/shop/icons/icon-4.png" alt='icon') 
         span.catalog__title Детская посуда
-    li.catalog__item
-      a.catalog__link.catalog__link_submenu(href="#")
+      ul.catalog-submenu.JS-Megamenu-Submenu
+        each listItem in ['Вазы', 'Ключницы']
+          li.catalog-submenu__item: a.catalog-submenu__link(href="#")= listItem
+
+    li.catalog__item.JS-Megamenu-Item
+      a.catalog__link.JS-Megamenu-Link(href="#")
         img.catalog__icon(src="images/shop/icons/icon-5.png" alt='icon') 
         span.catalog__title Интерьер
-    li.catalog__item
-      a.catalog__link.catalog__link_submenu(href="#")
+      ul.catalog-submenu.JS-Megamenu-Submenu
+        each listItem in ['Ведра', 'Тазы']
+          li.catalog-submenu__item: a.catalog-submenu__link(href="#")= listItem
+
+    li.catalog__item.JS-Megamenu-Item
+      a.catalog__link.JS-Megamenu-Link(href="#")
         img.catalog__icon(src="images/shop/icons/icon-6.png" alt='icon') 
         span.catalog__title Хозяйственные товары
-    li.catalog__item
-      a.catalog__link.catalog__link_submenu(href="#")
+
+    li.catalog__item.JS-Megamenu-Item
+      a.catalog__link.JS-Megamenu-Link(href="#")
         img.catalog__icon(src="images/shop/icons/icon-7.png" alt='icon') 
         span.catalog__title Пакеты подарочные
-
-
-  //.catalog.catalog_hidden#main-catalog(data-toggler=".catalog_hidden")
-    .grid-container.catalog-inner
-      button.catalog-close
-        include ../../../images/close.svg
-      .grid-x.grid-padding-x(data-equalizer="catalog-card" data-equalize-by-row="true")
-        .cell.large-11
-          .catalog-card(style="background-image: url(./i/cat-1.jpg)" data-equalizer-watch="catalog-card")
-            h4.catalog-card__title Посуда для приготовления
-            ul.catalog-list
-              each listItem in ['Баки', 'Наборы посуды', 'Кастрюли', 'Ковши', 'Лотки', 'Миски', 'Кружки эмалированные', 'Сковороды', 'Чайники']
-                li: a.catalog-list__item(href="#")= listItem
-
-        .cell.large-13
-          .catalog-card(data-equalizer-watch="catalog-card")
-            h4.catalog-card__title Кухонные принадлежности
-            .grid-x.medium-up-2
-              .cell
-                ul.catalog-list
-                  each listItem in ['Банки для сыпучих продуктов ', 'Венчики', 'лопатки', 'половники', 'Доски разделочные', 'Ложки и шумовки', 'Масленки', 'Молотки', 'Наборы кухонных приборов', 'Ступки', 'Терки']
-                    li: a.catalog-list__item(href="#")= listItem
-              .cell
-                ul.catalog-list
-                  each listItem in ['Салфетницы', 'Солонки', 'Подложки', 'Наборы для специй', 'Пакеты и пленка для продуктов', 'Подносы', 'Скалки', 'Толкушки' , 'Хлебницы']
-                    li: a.catalog-list__item(href="#")= listItem
-
-        .cell.large-13
-          .catalog-card(style="background-image: url(./i/cat-2.jpg)" data-equalizer-watch="catalog-card")
-            h4.catalog-card__title Посуда для чая и кофе
-            ul.catalog-list
-              each listItem in ['Заварочные чайники', 'Бутылки для воды', 'Кофеварки', 'Кружки', 'Сахарницы', 'Турки']
-                li: a.catalog-list__item(href="#")= listItem
-                
-        .cell.large-11
-          .catalog-card(style="background-image: url(./i/cat-3.jpg)" data-equalizer-watch="catalog-card")
-            h4.catalog-card__title Детская посуда
-            h5.catalog-card__subtitle Интерьер
-            ul.catalog-list
-              each listItem in ['Вазы', 'Ключницы']
-                li: a.catalog-list__item(href="#")= listItem
-            h5.catalog-card__subtitle Хозяйственные товары
-            ul.catalog-list
-              each listItem in ['Ведра', 'Тазы']
-                li: a.catalog-list__item(href="#")= listItem
-            h5.catalog-card__subtitle Пакеты подарочные

@@ -4,7 +4,6 @@ $(document).foundation();
 (function ($) {
   "use strict";
   $(function () {
-
     /** fix bug equalizer */
     if ($('[data-equalizer]').length) {
       Foundation.reInit('equalizer');
@@ -420,7 +419,13 @@ $(document).foundation();
 
     $('.category-list__item').each(function () {
       new ToggleMenu('.category-list__link', '.subcategory-list', $(this));
-    })
+    });
+
+    $('.JS-Megamenu').each(function() {
+      let options = $(this).data('megamenu');
+      options = eval("("+options+")");
+      new Megamenu(this, options);
+    });
 
   });
 })(jQuery);
