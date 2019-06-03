@@ -80,6 +80,10 @@
       .catalog__title {
         color: $white;
       }
+
+      .catalog__icon {
+        color: $white;
+      }
     }
 
     &:hover {
@@ -98,12 +102,18 @@
       .catalog__title {
         color: $white;
       }
+
+      .catalog__icon {
+        color: $white;
+      }
     }
   }
 
   &__icon {
     position: absolute;
     left: rem-calc(15);
+    width: rem-calc(40);
+    text-align: center;
     top: 50%;
     transform: translateY(-50%);
   }

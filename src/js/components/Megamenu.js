@@ -18,6 +18,14 @@ class Megamenu {
   }
 
   init() {
+    let _this = this;
+
+    $(document).mouseup(function(e) {
+      if(!_this.$items.is(e.target) && _this.$items.has(e.target).length === 0) {
+        _this.closeSubmenu();
+      }
+    });
+
     this.toggle();
     this.ready();
   }
@@ -31,16 +39,32 @@ class Megamenu {
   toggle() {
     let _this = this;
     this.$items.each(function() {
+      let $item = $(this);
       let $submenu = $(this).find('.JS-Megamenu-Submenu');
       let $link = $(this).find('.JS-Megamenu-Link');
+      
       if ($submenu.length) {
         $link
           .addClass(_this.cssSubmenuClass)
           .addClass('JS-Megamenu-HasSubmenu');
 
         if (_this.showOnHover) {
-          $link.on('hover', () => {
+          $item.mouseenter(function() {
+            $link
+              .addClass(_this.cssLinkActive)
+              .addClass('JS-Megamenu-Link-active');
+            $submenu
+              .addClass(_this.cssSubmenuActive)
+              .addClass('JS-Megamenu-Submenu-active'); 
+          });
 
+          $item.mouseleave(function() {
+            $link
+            .removeClass(_this.cssLinkActive)
+            .removeClass('JS-Megamenu-Link-active');
+            $submenu
+              .removeClass(_this.cssSubmenuActive)
+              .removeClass('JS-Megamenu-Submenu-active');  
           });
         } else {
           $link.on('click', function(event) {
